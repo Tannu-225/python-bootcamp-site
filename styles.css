@@ -182,15 +182,160 @@
             padding: 0 80px;
         }
 
+        /* Scroll Animation */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Header */
-        header {
+header {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 0.3s ease;;
+}
+
+header.scrolled {
+    padding: 12px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+body.dark-theme header.scrolled {
+    background: rgba(45, 55, 72, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header.scrolled .logo img {
+    height: 35px;
+}
+
+header.scrolled .nav-links a {
+    font-size: 14px;
+}
+
+header.scrolled .header-cta,
+header.scrolled .theme-toggle {
+    transform: scale(0.9);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.logo img {
+    height: 10vh;
+    width: 10vw;
+    transition: height 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.theme-toggle {
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+.theme-toggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+
+body.dark-theme .theme-toggle {
+    background: #1a202c;
+    border-color: #4a5568;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #2d3748;
+    transition: all 0.3s;
+}
+
+body.dark-theme .mobile-menu-toggle span {
+    background: #e2e8f0;
+}
+
+.header-cta {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.header-cta:hover {
+    transform: translateY(-2px);
+}
+        /* header {
             background: #fff;
             padding: 20px 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             position: sticky;
             top: 0;
             z-index: 100;
-        }
+        } */
 
         nav {
             display: flex;
@@ -198,7 +343,7 @@
             align-items: center;
         }
 
-        .logo {
+        /* .logo {
             font-size: 28px;
             font-weight: 700;
             color: #2d3748;
@@ -206,7 +351,7 @@
 
         .logo span {
             color: #ff6b6b;
-        }
+        } */
 
         .nav-links {
             display: flex;
@@ -475,7 +620,7 @@
             color: #4a5568;
         }
 
-        .form-submit {
+        /* .form-submit {
             width: 100%;
             background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
             color: white;
@@ -490,6 +635,54 @@
 
         .form-submit:hover {
             transform: translateY(-2px);
+        } */
+        .form-submit {
+            width: 100%;
+            background: #25d366;
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .form-submit:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-icon-button {
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-icon-button svg {
+            width: 100%;
+            height: 100%;
+            fill: white;
+        }
+
+        .whatsapp-time {
+            font-size: 11px;
+            color: #667781;
+            text-align: right;
+            margin-top: 5px;
+        }
+
+        body.dark-theme .whatsapp-time {
+            color: #8696a0;
         }
 
         /* Program Highlights */
