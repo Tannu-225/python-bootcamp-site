@@ -160,6 +160,21 @@
         body.dark-theme .learner-bubble h3 {
             color: #1a202c;
         }
+        body.dark-theme .final-cta {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+        body.dark-theme .logo {
+            color: #e2e8f0;
+        }
+        body.dark-theme .header-cta {
+            background: linear-gradient(135deg, #ff8e53 0%, #ff6b6b 100%);
+        }
+        body.dark-theme .trust-indicators span {
+            color: #e2e8f0;
+        }
+        body.dark-theme .stars {
+            color: #ffc107;
+        }
 
         .container {
             max-width: 1440px;
@@ -276,13 +291,13 @@
         body.dark-theme .mobile-menu-toggle span {
             background: #e2e8f0;
         }
-                .nav-links {
+            /* .nav-links {
             left: -100%;
         }
 
         .nav-links.active {
             left: 0;
-        }
+        } */
 
 
         /* Hero Section */
@@ -582,7 +597,7 @@
         }
 
         /* Alumni Section */
-        .alumni-section {
+        /* .alumni-section {
             padding: 100px 0;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -643,7 +658,7 @@
             font-weight: 600;
             color: #667eea;
             font-size: 14px;
-        }
+        } */
 
         /* Roadmap Section */
         .roadmap-section {
@@ -765,7 +780,7 @@
         }
 
         /* About Program Section */
-        .about-program {
+        /* .about-program {
             padding: 100px 0;
             background: white;
         }
@@ -858,10 +873,10 @@
             color: white;
             font-size: 18px;
             flex-shrink: 0;
-        }
+        } */
 
         /* Placement Benefits */
-        .placement-benefits {
+        /* .placement-benefits {
             padding: 100px 0;
             background: #f7fafc;
         }
@@ -907,10 +922,10 @@
             color: #718096;
             font-size: 14px;
             line-height: 1.6;
-        }
+        } */
 
         /* Dashboard Preview */
-        .dashboard-preview {
+        /* .dashboard-preview {
             padding: 100px 0;
             background: white;
             position: relative;
@@ -977,10 +992,10 @@
         .stat-label {
             font-size: 14px;
             opacity: 0.7;
-        }
+        } */
 
         /* Testimonials */
-        .testimonials {
+        /* .testimonials {
             padding: 100px 0;
             background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
             color: white;
@@ -1046,10 +1061,10 @@
             font-size: 15px;
             line-height: 1.7;
             opacity: 0.9;
-        }
+        } */
 
         /* Faculty Section */
-        .faculty-section {
+        /* .faculty-section {
             padding: 100px 0;
             background: white;
         }
@@ -1119,10 +1134,10 @@
         .faculty-btn:hover {
             background: #667eea;
             color: white;
-        }
+        } */
 
         /* Learner Background */
-        .learner-background {
+        /* .learner-background {
             padding: 100px 0;
             background: #f7fafc;
         }
@@ -1176,7 +1191,7 @@
         .learner-bubble h3 {
             font-size: 18px;
             color: #1a202c;
-        }
+        } */
 
         /* Final CTA */
         .final-cta {
@@ -1341,33 +1356,33 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .alumni-grid {
+            /* .alumni-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
             .roadmap-content {
                 gap: 40px;
-            }
+            } */
 
-            .roadmap-image {
+            /* .roadmap-image {
                 height: 400px;
             }
 
             .about-text h2 {
                 font-size: 36px;
-            }
+            } */
 
             .benefits-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .testimonial-grid {
+            /* .testimonial-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
             .faculty-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
+            } */
 
             .footer-content {
                 grid-template-columns: 1fr 1fr;
@@ -1461,14 +1476,14 @@
 
             /* Sections Mobile */
             .program-highlights,
-            .alumni-section,
-            .roadmap-section,
-            .about-program,
-            .placement-benefits,
-            .dashboard-preview,
-            .testimonials,
-            .faculty-section,
-            .learner-background {
+            /* .alumni-section, */
+            /* .about-program, */
+            /* .placement-benefits, */
+            /* .dashboard-preview, */
+            /* .testimonials, */
+            /* .faculty-section, */
+            /* .learner-background   */
+            .roadmap-section {
                 padding: 60px 0;
             }
 
@@ -1482,9 +1497,9 @@
 
             /* Grids Mobile */
             .highlights-grid,
-            .alumni-grid,
-            .benefits-grid,
-            .testimonial-grid,
+            /* .alumni-grid, */
+            /* .benefits-grid, */
+            /* .testimonial-grid, */
             .faculty-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -1513,7 +1528,7 @@
             }
 
             /* About Mobile */
-            .about-content {
+            /* .about-content {
                 grid-template-columns: 1fr;
             }
 
@@ -1528,10 +1543,10 @@
 
             .about-text h2 {
                 font-size: 28px;
-            }
+            } */
 
             /* Dashboard Mobile */
-            .dashboard-mockup {
+            /* .dashboard-mockup {
                 height: auto;
                 min-height: 500px;
                 padding: 25px;
@@ -1549,10 +1564,10 @@
 
             .dashboard-title {
                 font-size: 20px;
-            }
+            } */
 
             /* Learner Bubbles Mobile */
-            .learner-bubble {
+            /* .learner-bubble {
                 width: 160px;
                 height: 160px;
             }
@@ -1563,7 +1578,7 @@
 
             .learner-bubble h3 {
                 font-size: 16px;
-            }
+            } */
 
             /* Final CTA Mobile */
             .final-cta {
@@ -1612,14 +1627,15 @@
                 font-size: 24px;
             }
 
-            .highlight-card,
-            .benefit-card,
-            .testimonial-card,
-            .faculty-card {
+           
+            /* .benefit-card, */
+            /* .testimonial-card, */
+            /* .faculty-card  */
+            .highlight-card {
                 padding: 25px;
             }
 
-            .alumni-card {
+            /* .alumni-card {
                 flex-direction: column;
                 text-align: center;
             }
@@ -1627,5 +1643,5 @@
             .learner-bubble {
                 width: 140px;
                 height: 140px;
-            }
+            } */
         }
