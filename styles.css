@@ -196,8 +196,9 @@
 
         /* Header */
 header {
+    height: 80px;  
     background: #fff;
-    padding: 20px 0;
+    padding: 12px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
@@ -218,7 +219,7 @@ body.dark-theme header.scrolled {
 }
 
 header.scrolled .logo img {
-    height: 35px;
+    height: 38px;   /* smaller logo on scroll */
 }
 
 header.scrolled .nav-links a {
@@ -231,6 +232,7 @@ header.scrolled .theme-toggle {
 }
 
 nav {
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -243,10 +245,13 @@ nav {
 }
 
 .logo img {
-    height: 10vh;
-    width: 10vw;
-    transition: height 0.3s ease;
+   height: 160px;
+   margin-top: 15px;              /* LARGE logo */
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
 }
+
 
 .nav-links {
     display: flex;
