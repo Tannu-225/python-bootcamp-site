@@ -10,6 +10,8 @@
             line-height: 1.6;
             overflow-x: hidden;
             transition: background-color 0.3s, color 0.3s;
+            background: #f7fafc;
+            padding: 40px 20px;
         }
 
         /* Dark Theme Styles */
@@ -61,7 +63,7 @@
             color: #e2e8f0;
         }
 
-        body.dark-theme .program-highlights {
+        /* body.dark-theme .program-highlights {
             background: #1a202c;
         }
 
@@ -83,7 +85,7 @@
 
         body.dark-theme .highlight-card p {
             color: #a0aec0;
-        }
+        } */
 
         body.dark-theme .roadmap-section {
             background: #2d3748;
@@ -177,7 +179,7 @@
         }
 
         .container {
-            max-width: 1440px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 80px;
         }
@@ -691,7 +693,7 @@ body.dark-theme .mobile-menu-toggle span {
         }
 
         /* Program Highlights */
-        .section-header {
+       .section-header {
             text-align: center;
             margin-bottom: 60px;
         }
@@ -720,9 +722,23 @@ body.dark-theme .mobile-menu-toggle span {
 
         .highlights-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
             margin-top: 40px;
+        }
+
+        /* Laptop/Desktop (1024px - 1440px) */
+        @media (max-width: 1440px) {
+            .highlights-grid {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
         }
 
         .highlight-card {
@@ -927,172 +943,6 @@ body.dark-theme .mobile-menu-toggle span {
                 font-size: 60px;
             }
         }
-        /* .program-highlights {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-tag {
-            color: #667eea;
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .section-header h2 {
-            font-size: 42px;
-            margin: 15px 0;
-            color: #1a202c;
-        }
-
-        .section-header p {
-            color: #718096;
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-        }
-
-        .highlight-card {
-            background: linear-gradient(135deg, #f0f4ff 0%, #fff 100%);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 2px solid transparent;
-        }
-
-        .highlight-card:nth-child(1) {
-            background: linear-gradient(135deg, #fef3f3 0%, #fff 100%);
-        }
-
-        .highlight-card:nth-child(2) {
-            background: linear-gradient(135deg, #f0fff4 0%, #fff 100%);
-        }
-
-        .highlight-card:nth-child(3) {
-            background: linear-gradient(135deg, #fffbeb 0%, #fff 100%);
-        }
-
-        .highlight-card:nth-child(4) {
-            background: linear-gradient(135deg, #f0f4ff 0%, #fff 100%);
-        }
-
-        .highlight-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-
-        .highlight-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-        }
-
-        .highlight-card:nth-child(1) .highlight-icon {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
-        }
-
-        .highlight-card:nth-child(2) .highlight-icon {
-            background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
-        }
-
-        .highlight-card:nth-child(3) .highlight-icon {
-            background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%);
-        }
-
-        .highlight-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: #1a202c;
-        }
-
-        .highlight-card p {
-            color: #718096;
-            font-size: 14px;
-            line-height: 1.6;
-        } */
-
-        /* Alumni Section */
-        /* .alumni-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .alumni-section .section-header h2,
-        .alumni-section .section-header p {
-            color: white;
-        }
-
-        .alumni-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .alumni-card {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            transition: transform 0.3s;
-        }
-
-        .alumni-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .alumni-photo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #ffd6e7 0%, #ffcce6 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            flex-shrink: 0;
-        }
-
-        .alumni-info h4 {
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .company-logo {
-            width: 100px;
-            height: 40px;
-            background: white;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
-            color: #667eea;
-            font-size: 14px;
-        } */
 
         /* Roadmap Section */
         .roadmap-section {
