@@ -61,30 +61,6 @@
             color: #e2e8f0;
         }
 
-        /* body.dark-theme .program-highlights {
-            background: #1a202c;
-        }
-
-        body.dark-theme .section-header h2 {
-            color: #e2e8f0;
-        }
-
-        body.dark-theme .section-header p {
-            color: #a0aec0;
-        }
-
-        body.dark-theme .highlight-card {
-            background: #2d3748;
-        }
-
-        body.dark-theme .highlight-card h3 {
-            color: #e2e8f0;
-        }
-
-        body.dark-theme .highlight-card p {
-            color: #a0aec0;
-        } */
-
         body.dark-theme .roadmap-section {
             background: #2d3748;
         }
@@ -234,21 +210,19 @@ header.scrolled .theme-toggle {
 nav {
     height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
     display: flex;
-    /* align-items: center; */
+    align-items: left;
     transition: all 0.3s ease;
 }
 
 .logo img {
-    height: 160px;
+    height: 250px;
     margin-top: 15px;          
     width: auto;
-    /* object-fit: contain; */
+    object-fit: contain;
     transition: all 0.3s ease;
 }
 
@@ -257,6 +231,8 @@ nav {
     display: flex;
     gap: 40px;
     list-style: none;
+    justify-content: space-evenly;
+    padding-left: 400px;
 }
 
 .nav-links a {
