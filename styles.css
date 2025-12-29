@@ -10,8 +10,6 @@
             line-height: 1.6;
             overflow-x: hidden;
             transition: background-color 0.3s, color 0.3s;
-            background: #f7fafc;
-            padding: 40px 20px;
         }
 
         /* Dark Theme Styles */
