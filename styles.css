@@ -722,7 +722,7 @@
         }
 
         .testimonial-card {
-            background: linear-gradient(135deg, #bec7f0 0%, #decbf1 100%);
+            background: linear-gradient(135deg, #7282c9 0%, #c29ce6 100%);
             backdrop-filter: blur(10px);
             padding: 35px;
             border-radius: 20px;
@@ -881,6 +881,30 @@
             width: auto;
         }
 
+        /* Roadmap Section */
+        .roadmap-section {
+            padding: 100px 0;
+            background: transparent;
+            position: relative;
+        }
+
+        .roadmap-image-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .roadmap-image-wrapper img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            background: transparent;
+        }
+
+        
+        /* Responsive */
         @media (max-width: 1200px) {
             .highlights-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -937,6 +961,11 @@
                 display: flex;
             }
 
+            .logo img {
+                height: 180px;
+                margin-top: 0;
+            }
+
             .hero {
                 padding: 60px 0;
             }
@@ -979,6 +1008,28 @@
                 padding: 0 20px 20px 20px;
             }
 
+            .roadmap-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .roadmap-circle img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .roadmap-text h3 {
+                font-size: 18px;
+            }
+
+            .roadmap-text p {
+                font-size: 14px;
+            }
+
+            .roadmap-image-wrapper {
+                padding: 20px 10px;
+            }
+
             .final-cta {
                 padding: 60px 0;
             }
@@ -1009,7 +1060,8 @@
             }
 
             .footer-logo img {
-                height: 200px;
+                height: 180px;
+                margin: 0;
             }
 
             .footer-logo-text {
