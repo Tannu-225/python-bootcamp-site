@@ -722,7 +722,7 @@
         }
 
         .testimonial-card {
-            background: linear-gradient(135deg, #b2bdec 0%, #dac0f1 100%);
+            background: linear-gradient(135deg, #cdd3f0 0%, #ebdbf8 100%);
             backdrop-filter: blur(10px);
             padding: 35px;
             border-radius: 20px;
