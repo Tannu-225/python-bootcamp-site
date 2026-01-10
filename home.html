@@ -3,964 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AVIN Academy - Transform Your Career</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Header */
-               /* Header */
-header {
-    height: 80px;  
-    background: #fff;
-    padding: 12px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    transition: all 0.3s ease;;
-}
-
-header.scrolled {
-    padding: 12px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
-
-body.dark-theme header.scrolled {
-    background: rgba(45, 55, 72, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-header.scrolled .logo img {
-    height: 38px;   /* smaller logo on scroll */
-}
-
-header.scrolled .nav-links a {
-    font-size: 14px;
-}
-
-header.scrolled .header-cta,
-header.scrolled .theme-toggle {
-    transform: scale(0.9);
-}
-
-nav {
-    height: 100%;
-    display: flex;
-}
-
-.logo {
-    display: flex;
-    align-items: left;
-    transition: all 0.3s ease;
-}
-
-.logo img {
-    height: 250px;
-    margin-top: 15px;          
-    width: auto;
-    object-fit: contain;
-    transition: all 0.3s ease;
-}
-
-
-.nav-links {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    justify-content: space-evenly;
-    padding-left: 400px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #4a5568;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #ff6b6b;
-}
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 0;
-}
-
-.theme-toggle {
-    background: #f7fafc;
-    border: 2px solid #e2e8f0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 20px;
-    margin-right: 20px;
-}
-
-.theme-toggle:hover {
-    transform: rotate(20deg) scale(1.1);
-}
-
-body.dark-theme .theme-toggle {
-    background: #1a202c;
-    border-color: #4a5568;
-}
-
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #2d3748;
-    transition: all 0.3s;
-}
-
-body.dark-theme .mobile-menu-toggle span {
-    background: #e2e8f0;
-}
-
-.header-cta {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 25px;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.header-cta:hover {
-    transform: translateY(-2px);
-}
-      
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #4a5568;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ff6b6b;
-        }
-
-        .header-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            border: none;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .header-cta:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Theme Toggle Button */
-        .theme-toggle {
-            background: #f7fafc;
-            border: 2px solid #e2e8f0;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 20px;
-            margin-right: 20px;
-        }
-
-        .theme-toggle:hover {
-            transform: rotate(20deg) scale(1.1);
-            border-color: #667eea;
-        }
-
-        body.dark-theme .theme-toggle {
-            background: #1a202c;
-            border-color: #4a5568;
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 0;
-        }
-
-         /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .mobile-menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #2d3748;
-            transition: all 0.3s;
-        }
-
-        body.dark-theme .mobile-menu-toggle span {
-            background: #e2e8f0;
-        }
-
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #f8f4ff 0%, #ffe6f0 100%);
-            padding: 5rem 5%;
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .hero-content {
-            flex: 1;
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .hero .highlight {
-            color: #6B46C1;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .stat-item span {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .hero-form {
-            flex: 1;
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 500px;
-        }
-
-        .hero-form h3 {
-            color: #333;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #555;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background: #FF6B6B;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #ff5252;
-            transform: translateY(-2px);
-        }
-
-        .btn-success {
-            background: #25D366;
-            color: white;
-            width: 100%;
-        }
-
-        .btn-success:hover {
-            background: #1fb855;
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #6B46C1;
-            border: 2px solid #6B46C1;
-        }
-
-        .btn-secondary:hover {
-            background: #6B46C1;
-            color: white;
-        }
-
-        /* Why Choose Us */
-        .why-choose {
-            padding: 5rem 5%;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #6B46C1, #9b7dd4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-        }
-
-        .feature-card h3 {
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card p {
-            color: #666;
-        }
-
-        /* Courses Section */
-        .courses {
-            padding: 5rem 5%;
-            background: #f8f9fa;
-        }
-
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .course-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .course-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
-        }
-
-        .course-image {
-            height: 200px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .course-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .course-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(255, 255, 255, 0.95);
-            color: #6B46C1;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-        }
-
-        .course-content {
-            padding: 1.5rem;
-        }
-
-        .course-content h3 {
-            color: #1a1a1a;
-            margin-bottom: 0.8rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .course-content p {
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .course-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            border-top: 1px solid #f0f0f0;
-        }
-
-        .course-footer a {
-            color: #6B46C1;
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            transition: gap 0.3s;
-        }
-
-        .course-footer a:hover {
-            gap: 0.6rem;
-        }
-
-        .course-rating {
-            color: #FFB400;
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        /* Transform Career */
-        .transform {
-            padding: 5rem 5%;
-            background: linear-gradient(135deg, #6B46C1 0%, #9b7dd4 100%);
-            color: white;
-            text-align: center;
-        }
-
-        .transform h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .transform p {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* FAQ Section */
-        .faq {
-            padding: 5rem 5%;
-            background: white;
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: #f8f9fa;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .faq-question:hover {
-            background: #e9ecef;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s;
-        }
-
-        .faq-answer.active {
-            max-height: 300px;
-        }
-
-        .faq-answer p {
-            padding: 0 1.5rem 1.5rem;
-            color: #666;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: white;
-            padding: 3rem 5%;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: white;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: #aaa;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px solid #333;
-            color: #aaa;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-buttons {
-                display: none;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .courses-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .course-card {
-                max-width: 500px;
-                margin: 0 auto;
-            }
-        }
-
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .courses-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .nav-links a {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <title>AVIN Education</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
-     <header>
-    <nav class="container">
-        <div class="logo">
-            <img src="images/logo.png" alt="Ayin Elucation">
-        </div>
-        <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="nav-actions">
-            <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-</header>
-    <!-- <header>
-        <nav>
-             <div class="logo">
+    <header>
+        <nav class="container">
+            <div class="logo">
             <img src="images/logo.png" alt="Ayin Education">
         </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#courses">Courses</a></li>
+                <li><a href="#career">Courses</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="nav-buttons">
-                <button class="btn-login">Log In</button>
-                <button class="btn-signup">Sign Up</button>
+            <div class="nav-actions">
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <button class="mobile-menu-btn">☰</button>
         </nav>
-    </header> -->
+    </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="#home">
         <div class="hero-content">
-            <h1>Become a <span class="highlight">Python Developer</span> With Industry-Ready Skills</h1>
-            <p>Transform your career with our intensive Python Bootcamp. After you'll learn automation, data analysis, APIs, web development, and real-world projects. Accelerate your journey into tech with expert-led training and full support.</p>
-            <button class="btn btn-primary">Download Syllabus</button>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span>⭐⭐⭐⭐⭐</span>
-                    <span>Rated 4.9/5</span>
-                </div>
-                <div class="stat-item">
-                    <span>👥 5,000+ Learners</span>
-                </div>
-                <div class="stat-item">
-                    <span>✅ 98% Success Rate</span>
-                </div>
+            <h1>Unlock Your <span class="highlight">Micro Learning</span> Power</h1>
+            <p>Master new skills in bite-sized lessons. Join thousands achieving their goals with our data-backed tech approach to expert insights.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Get Started Now</button>
+                <button class="btn btn-outline">Watch Demo</button>
+            </div>
+            <div class="hero-tags">
+                <span class="hero-tag">Trusted by 50000+ Students</span>
+                <span class="hero-tag">200+ Courses</span>
+                <span class="hero-tag">98% Success Rate</span>
             </div>
         </div>
-        <div class="hero-form">
-            <h3>Reserve Your Free Webinar Seat</h3>
-            <p>Attend our free live webinar and discover how this Python Bootcamp can accelerate your tech career.</p>
-            <form>
-                <div class="form-group">
-                    <label>Full Name*</label>
-                    <input type="text" placeholder="Enter your name" required>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" alt="Learning Together">
+            <div class="hero-badge">
+                <div class="hero-badge-icon">✓</div>
+                <div>
+                    <strong>Course Completed</strong>
+                    <p style="font-size: 0.85rem; color: #6b7280; margin: 0;">Congratulations!</p>
                 </div>
-                <div class="form-group">
-                    <label>Email Address*</label>
-                    <input type="email" placeholder="yourname@example.com" required>
-                </div>
-                <div class="form-group">
-                    <label>Mobile Number*</label>
-                    <input type="tel" placeholder="+91 XXXXX XXXXX" required>
-                </div>
-                <div class="form-group">
-                    <label>Education</label>
-                    <select>
-                        <option>Complete Beginner</option>
-                        <option>Some Programming Knowledge</option>
-                        <option>Experienced Developer</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-success">📱 Submit on WhatsApp</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose" id="about">
-        <div class="section-title">
-            <h2>Why Choose AVIN Academy?</h2>
-            <p>We provide the best learning experience with industry-ready curriculum</p>
+    <!-- Features -->
+    <section class="features">
+        <div class="features-header">
+            <p style="color: #7C3AED; font-weight: 600; margin-bottom: 0.5rem;">LEARN SMART, LEARN SMALL</p>
+            <h2>Why Choose MicroLearn?</h2>
         </div>
         <div class="features-grid">
             <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Smart Learning</h3>
+                <p>Learn using bite-sized content that fits into your busy schedule</p>
+            </div>
+            <div class="feature-card">
                 <div class="feature-icon">👨‍🏫</div>
-                <h3>Expert Instructors</h3>
-                <p>Learn from industry professionals with years of real-world experience</p>
+                <h3>Expert Content</h3>
+                <p>Content created and curated by industry experts</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">💼</div>
-                <h3>100% Job Assistance</h3>
-                <p>Get dedicated placement support and career guidance throughout your journey</p>
+                <div class="feature-icon">🎓</div>
+                <h3>Certifications</h3>
+                <p>Learn and monetize progress and skills within industry</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Hands-on Projects</h3>
-                <p>Build real-world projects to strengthen your portfolio and skills</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">⏰</div>
-                <h3>Flexible Learning</h3>
-                <p>Learn at your own pace with lifetime access to course materials</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏆</div>
-                <h3>Industry Certificate</h3>
-                <p>Earn recognized certifications that boost your career prospects</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3>Community Support</h3>
-                <p>Join a vibrant community of learners and mentors</p>
+                <div class="feature-icon">♾️</div>
+                <h3>Flexible Access</h3>
+                <p>Access courses anywhere anytime on any device</p>
             </div>
         </div>
     </section>
 
-    <!-- Our Courses -->
+    <!-- Courses -->
     <section class="courses" id="courses">
-        <div class="section-title">
-            <h2>Our Popular Courses</h2>
-            <p>Launch your career in one of the most in-demand tech roles</p>
+        <div class="courses-header">
+            <div>
+                <p style="color: #7C3AED; font-weight: 600; margin-bottom: 0.5rem;">POPULAR COURSES</p>
+                <h2>Explore Popular Courses</h2>
+            </div>
+            <button class="btn btn-outline">View All Courses</button>
         </div>
         <div class="courses-grid">
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&h=400&fit=crop" alt="Python Developer">
                     <span class="course-badge">In-Demand</span>
                 </div>
                 <div class="course-content">
-                    <h3>Python Developer</h3>
-                    <p>Build applications, automate tasks, and create backend systems using Python frameworks like Django or FastAPI. Write clean, efficient code to power websites, software, and APIs.</p>
+                    <h3 class="course-title">Python Developer</h3>
+                    <p class="course-description">Build applications, automate tasks, and create backend systems using Python. Frameworks like Django or FastAPI. Write clean, efficient code to power websites, software, and APIs.</p>
                     <div class="course-footer">
-                        <a href="#">Learn more →</a>
-                        <span class="course-rating">⭐ 4.8/5</span>
+                        <a href="#" class="course-link">Learn more →</a>
+                        <div class="course-rating">
+                            <span class="star">⭐</span>
+                            <span>4.8/5</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" alt="Data Analyst">
                     <span class="course-badge">High Growth</span>
                 </div>
                 <div class="course-content">
-                    <h3>Data Analyst</h3>
-                    <p>Collect, clean, and interpret data to help businesses make informed decisions. Use Python, SQL, and visualization tools like Power BI to uncover patterns and present insights.</p>
+                    <h3 class="course-title">Data Analyst</h3>
+                    <p class="course-description">Collect, clean, and interpret data to help businesses make informed decisions. Use Python, SQL, and visualization tools like Power BI to uncover patterns and present insights.</p>
                     <div class="course-footer">
-                        <a href="#">Learn more →</a>
-                        <span class="course-rating">⭐ 4.9/5</span>
+                        <a href="#" class="course-link">Learn more →</a>
+                        <div class="course-rating">
+                            <span class="star">⭐</span>
+                            <span>4.9/5</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=400&fit=crop" alt="Data Scientist">
                     <span class="course-badge">Future Ready</span>
                 </div>
                 <div class="course-content">
-                    <h3>Data Scientist</h3>
-                    <p>Use statistics, machine learning, and advanced algorithms to build predictive models. Analyze large datasets to solve complex problems and help companies forecast trends.</p>
+                    <h3 class="course-title">Data Scientist</h3>
+                    <p class="course-description">Use statistics, machine learning, and advanced algorithms to build predictive models. Analyze large datasets to solve complex problems and help companies forecast trends.</p>
                     <div class="course-footer">
-                        <a href="#">Learn more →</a>
-                        <span class="course-rating">⭐ 4.7/5</span>
+                        <a href="#" class="course-link">Learn more →</a>
+                        <div class="course-rating">
+                            <span class="star">⭐</span>
+                            <span>4.7/5</span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="course-card">
                 <div class="course-image">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop" alt="AI Engineer">
                     <span class="course-badge">Cutting Edge</span>
                 </div>
                 <div class="course-content">
-                    <h3>AI Engineer</h3>
-                    <p>Design and build AI systems such as chatbots, recommendation engines, and computer vision apps. Work with deep learning, neural networks, and modern AI tools.</p>
+                    <h3 class="course-title">AI Engineer</h3>
+                    <p class="course-description">Design and build AI systems such as chatbots, recommendation engines, and computer vision apps. Work with deep learning, neural networks, and modern AI tools.</p>
                     <div class="course-footer">
-                        <a href="#">Learn more →</a>
-                        <span class="course-rating">⭐ 5.0/5</span>
+                        <a href="#" class="course-link">Learn more →</a>
+                        <div class="course-rating">
+                            <span class="star">⭐</span>
+                            <span>5.0/5</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Transform Career -->
+    <!-- Transform -->
     <section class="transform">
-        <h2>Transform Your Career with Micro Skills</h2>
-        <p>Join thousands of successful developers who transformed their careers in just 4 weeks</p>
-        <div class="cta-buttons">
-            <button class="btn btn-primary">Book Free Webinar →</button>
-            <button class="btn btn-secondary">Download Syllabus</button>
+        <div class="transform-content">
+            <h2>Transform Your Career with <span class="highlight">Micro Skills</span></h2>
+            <p>We've built a flexible and easy-to-use platform to develop practical skills that fuel career growth. All bundled up in micro lessons designed to fit your schedule.</p>
+            <ul class="transform-features">
+                <li>Industry-aligned curriculum</li>
+                <li>Hands-on, practical coursework</li>
+                <li>Flexible, self-paced modules</li>
+            </ul>
+            <button class="btn btn-primary">Start Your Journey</button>
+        </div>
+        <div class="transform-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop" alt="Career Growth">
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
-        <div class="section-title">
+    <section class="faq" id="faqs">
+        <div class="faq-header">
+            <p style="color: #7C3AED; font-weight: 600; margin-bottom: 0.5rem;">SUPPORT</p>
             <h2>Frequently Asked Questions</h2>
-            <p>Got questions? We've got answers</p>
         </div>
         <div class="faq-container">
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Do I need prior programming experience?</span>
-                    <span>+</span>
+                    <span>What is Micro Learn?</span>
+                    <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>No prior programming experience is required. Our bootcamp is designed for complete beginners and takes you from basics to advanced concepts step by step.</p>
+                    <p>Micro Learn is an innovative online learning platform that breaks down complex topics into bite-sized, easily digestible lessons. Our approach helps you learn efficiently without overwhelming you with information.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>How long is the bootcamp?</span>
-                    <span>+</span>
+                    <span>Are the courses beginner-friendly?</span>
+                    <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>The intensive bootcamp runs for 4 weeks with daily sessions. However, you'll have lifetime access to all course materials and can learn at your own pace.</p>
+                    <p>Absolutely! Our courses are designed for all skill levels. We start with fundamentals and progressively build up to more advanced concepts, ensuring everyone can follow along at their own pace.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Will I get job placement support?</span>
-                    <span>+</span>
+                    <span>Can I access courses on mobile?</span>
+                    <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes! We provide 100% job placement assistance including resume building, mock interviews, and direct connections to hiring companies.</p>
+                    <p>Yes! Our platform is fully responsive and we offer dedicated mobile apps for iOS and Android. Learn anytime, anywhere, on any device that's convenient for you.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>What projects will I build?</span>
-                    <span>+</span>
+                    <span>Do I get a certificate after completion?</span>
+                    <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>You'll build 5+ real-world projects including web applications, automation scripts, data analysis dashboards, and API integrations that you can showcase in your portfolio.</p>
+                    <p>Yes! Upon completing a course, you'll receive a verified digital certificate that you can share on LinkedIn, add to your resume, or showcase in your professional portfolio.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Is there a certification provided?</span>
-                    <span>+</span>
+                    <span>Can I cancel my subscription anytime?</span>
+                    <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
-                    <p>Yes, upon successful completion of the bootcamp, you'll receive an industry-recognized certificate that you can add to your resume and LinkedIn profile.</p>
+                    <p>Yes, you can cancel your subscription at any time with no penalties. If you cancel, you'll continue to have access until the end of your billing period.</p>
                 </div>
             </div>
         </div>
@@ -969,8 +239,34 @@ body.dark-theme .mobile-menu-toggle span {
     <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <div class="footer-brand">
+                <h3><span class="brand-code">Code</span><span class="brand-master">Master</span></h3>
+                <p>Empowering aspiring developers to build successful tech careers through comprehensive training and dedicated placement support.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
             <div class="footer-section">
-                <h3>Programs</h3>
+                <h4>Programs</h4>
                 <ul>
                     <li><a href="#">Python Bootcamp</a></li>
                     <li><a href="#">Data Science Track</a></li>
@@ -979,7 +275,7 @@ body.dark-theme .mobile-menu-toggle span {
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Company</h3>
+                <h4>Company</h4>
                 <ul>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Success Stories</a></li>
@@ -988,7 +284,7 @@ body.dark-theme .mobile-menu-toggle span {
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Support</h3>
+                <h4>Support</h4>
                 <ul>
                     <li><a href="#">Help Center</a></li>
                     <li><a href="#">Terms of Service</a></li>
@@ -996,29 +292,42 @@ body.dark-theme .mobile-menu-toggle span {
                     <li><a href="#">Refund Policy</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
-                <ul>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">YouTube</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 AVIN Academy. All rights reserved. Built with passion for aspiring developers.</p>
+            <p>© 2024 CodeMaster. All rights reserved. Built with passion for aspiring developers.</p>
         </div>
     </footer>
 
     <script>
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('span:last-child');
-            
-            answer.classList.toggle('active');
-            icon.textContent = answer.classList.contains('active') ? '−' : '+';
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
         }
+
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const answer = element.nextElementSibling;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+                item.querySelector('.faq-answer').classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+                answer.classList.add('active');
+            }
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1033,7 +342,28 @@ body.dark-theme .mobile-menu-toggle span {
                 }
             });
         });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .course-card, .testimonial-card, .pricing-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
     </script>
-    <script src="scripts.js"></script>
 </body>
-</html> 
+</html>
