@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Developer Bootcamp | GenAI Skills</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+            <img src="images/logo.png" alt="Ayin Education">
+        </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#career">Courses</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="#">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1>Become a <span>Python Developer</span> With Industry-Ready Skills</h1>
+                    <p>Transform your career with our intensive Python Bootcamp. After you'll learn automation, data analysis, APIs, web development, and real-world projects. Accelerate your journey into tech with expert-led training and full support.</p>
+                    <button class="hero-cta">Download Syllabus →</button>
+                    
+                    <div class="trust-indicators">
+                        <div class="trust-item">
+                            <span class="stars">★★★★★</span>
+                            <span>Rated 4.9/5</span>
+                        </div>
+                        <div class="trust-item">
+                            <span>👥</span>
+                            <span>5,000+ Learners</span>
+                        </div>
+                        <div class="trust-item">
+                            <span>🎯</span>
+                            <span>98% Success Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="form-card">
+                        <h3>Reserve Your Free Webinar Seat</h3>
+                        <p class="subtitle">Join our next live info session and discover how this Python Bootcamp can accelerate your tech career.</p>
+                        
+                        <form>
+                            <div class="form-group">
+                                <label>Full Name*</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Email Address*</label>
+                                <input type="email" placeholder="youremail@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Mobile Number*</label>
+                                <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Education</label>
+                                <select>
+                                    <option>Complete Beginner</option>
+                                    <option>Intermediate</option>
+                                    <option>Switching Career</option>
+                                    <option>Student</option>
+                                </select>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms" required>
+                                <label for="terms">I agree to receive updates and communications</label>
+                            </div>
+                            
+                            <button type="submit" class="form-submit">
+                                <span class="whatsapp-icon-button">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.117 1.527 5.846L0 24l6.304-1.512A11.964 11.964 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.683-.531-5.195-1.448l-.372-.222-3.865.927.927-3.744-.244-.386A9.955 9.955 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
+                                    </svg>
+                                </span>
+                                Submit on WhatsApp
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="program-highlights" id="career">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">10+ Career Options</div>
+                <h2>Career Options After Completing This Bootcamp</h2>
+                <p>Launch your career in one of the most in-demand tech roles</p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="card-image">
+                        <img src="images/python_developer.png" alt="Python Developer Team">
+                        <!-- <div class="card-badge">In-Demand</div> -->
+                    </div>
+                    <div class="card-content">
+                        <h3>Python Developer</h3>
+                        <p>Build applications, automate tasks, and create backend systems using Python frameworks like Django or FastAPI. Write clean, efficient code to power websites, software, and APIs.</p>
+                        <div class="card-footer">
+                            <a href="#" class="learn-more">
+                                Learn more
+                                <svg viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                            <div class="card-meta">⭐ 4.8/5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="card-image">
+                        <img src="images/data_analyst.png" alt="Data Analytics Dashboard">
+                        <!-- <div class="card-badge">High Growth</div> -->
+                    </div>
+                    <div class="card-content">
+                        <h3>Data Analyst</h3>
+                        <p>Collect, clean, and interpret data to help businesses make informed decisions. Use Python, SQL, and visualization tools like Power BI to uncover patterns and present insights.</p>
+                        <div class="card-footer">
+                            <a href="#" class="learn-more">
+                                Learn more
+                                <svg viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                            <div class="card-meta">⭐ 4.9/5</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="card-image">
+                        <img src="images/data_scientist.png" alt="Data Science Team">
+                        <!-- <div class="card-badge">Future Ready</div> -->
+                    </div>
+                    <div class="card-content">
+                        <h3>Data Scientist</h3>
+                        <p>Use statistics, machine learning, and advanced algorithms to build predictive models. Analyze large datasets to solve complex problems and help companies forecast trends.</p>
+                        <div class="card-footer">
+                            <a href="#" class="learn-more">
+                                Learn more
+                                <svg viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                            <div class="card-meta">⭐ 4.7/5</div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="highlight-card">
+                <div class="card-image">
+                    <img src="images/c_programming.png" alt="C Programming">
+                    <!-- <div class="card-badge">Foundation</div> -->
+                </div>
+                <div class="card-content">
+                    <h3>C Programming</h3>
+                    <p>Master the fundamentals of programming with C language. Learn memory management, data structures, and algorithms that form the foundation of computer science and systems programming.</p>
+                    <div class="card-footer">
+                        <a href="#" class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <div class="card-meta">
+                            ⭐ 4.7/5
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-card">
+                <div class="card-image">
+                    <img src="images/web_developer.png" alt="Web Developer">
+                    <!-- <div class="card-badge">Popular</div> -->
+                </div>
+                <div class="card-content">
+                    <h3>Web Developer</h3>
+                    <p>Create stunning websites and web applications using HTML, CSS, JavaScript, and modern frameworks. Build responsive, user-friendly interfaces that work across all devices and browsers.</p>
+                    <div class="card-footer">
+                        <a href="#" class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <div class="card-meta">
+                            ⭐ 4.9/5
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-card">
+                <div class="card-image">
+                    <img src="images/full_stack_development.png" alt="Full Stack Developer">
+                    <!-- <div class="card-badge">Most Demanded</div> -->
+                </div>
+                <div class="card-content">
+                    <h3>Full Stack Developer</h3>
+                    <p>Become a complete developer by mastering both frontend and backend technologies. Build end-to-end applications using React, Node.js, databases, and cloud deployment platforms.</p>
+                    <div class="card-footer">
+                        <a href="#" class="learn-more">
+                            Learn more
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <div class="card-meta">
+                            ⭐ 5.0/5
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- <div class="highlight-card">
+                    <div class="card-image">
+                        <img src="images/ai_engineer.png" alt="AI Engineering">
+                        <div class="card-badge">Cutting Edge</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>AI Engineer</h3>
+                        <p>Design and build AI systems such as chatbots, recommendation engines, and computer vision apps. Work with deep learning, neural networks, and modern AI tools.</p>
+                        <div class="card-footer">
+                            <a href="#" class="learn-more">
+                                Learn more
+                                <svg viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </a>
+                            <div class="card-meta">⭐ 5.0/5</div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="roadmap-section" id="roadmap">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Learning Journey</div>
+                <h2>Your Path to Python Mastery</h2>
+                <p>A structured learning roadmap that takes you from beginner to industry-ready professional</p>
+            </div>
+
+            <div class="roadmap-image-wrapper">
+                <!-- <div class="roadmap-arrow-animated">↗</div> -->
+                <img src="images/roadmap.png" alt="Python Learning Roadmap - From Core Concepts to Industry Projects">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Student Success</div>  
+                <h2>What Our Students Say</h2>
+                <p>Real stories from developers who transformed their careers with us</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">RS</div>
+                        <div class="testimonial-info">
+                            <h4>Rajesh Sharma</h4>
+                            <p>Python Developer at TCS</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">This bootcamp completely changed my career trajectory. I came from a non-tech background, and within 4 months of completing the program, I landed my dream job. The hands-on projects and mentor support were incredible!</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">PN</div>
+                        <div class="testimonial-info">
+                            <h4>Priya Nair</h4>
+                            <p>Data Analyst at Infosys</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">The curriculum is perfectly structured, taking you from basics to advanced concepts. The instructors are industry experts who explain complex topics in simple terms. Best investment I've made in my career!</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AK</div>
+                        <div class="testimonial-info">
+                            <h4>Amit Kumar</h4>
+                            <p>AI Engineer at Wipro</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">The placement assistance is outstanding. From resume building to mock interviews, they prepare you for every step. I received 3 job offers within 2 weeks of completing the bootcamp. Highly recommended!</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SK</div>
+                        <div class="testimonial-info">
+                            <h4>Sneha Kapoor</h4>
+                            <p>Full Stack Developer at Accenture</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">What sets this bootcamp apart is the real-world project experience. I built 10+ projects that impressed every interviewer. The learning platform is intuitive and the community support is amazing!</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">VD</div>
+                        <div class="testimonial-info">
+                            <h4>Vikram Desai</h4>
+                            <p>Backend Developer at Cognizant</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">I was skeptical about online learning, but this program exceeded all expectations. The live sessions, personalized feedback, and career guidance made all the difference. My salary doubled after completion!</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AM</div>
+                        <div class="testimonial-info">
+                            <h4>Anjali Mehta</h4>
+                            <p>Data Scientist at Tech Mahindra</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-rating">★★★★★</div>
+                    <p class="testimonial-text">The GenAI and machine learning modules are cutting-edge. The instructors keep the content updated with latest industry trends. This bootcamp gave me skills that are in high demand right now!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            <h2>Start Your Career Journey Today</h2>
+            <p>Join thousands of successful developers. Transform your career in just 4 weeks.</p>
+            <div class="cta-buttons">
+                <button class="cta-primary">Book Free Webinar →</button>
+                <button class="cta-secondary">Download Syllabus</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Got Questions?</div>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about the Python Bootcamp</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need any prior programming experience to join?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No prior programming experience is required! Our bootcamp is designed for complete beginners. We start with the fundamentals and gradually progress to advanced topics. Whether you're a student, working professional, or career switcher, you'll find the curriculum accessible and well-paced.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the duration of the bootcamp?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The bootcamp is an intensive 4-month program with flexible learning options. We offer both weekday and weekend batches to accommodate working professionals. You can expect to dedicate 10-15 hours per week, including live sessions, projects, and self-paced learning.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What kind of career support do you provide?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide comprehensive career support including resume building, portfolio development, mock interviews, and direct connections to 1200+ hiring partners. Our placement team works with you one-on-one until you land your desired role. We also offer lifetime career guidance even after course completion.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are the classes live or pre-recorded?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All classes are conducted live with experienced instructors, allowing real-time interaction and Q&A. Sessions are recorded and available for review anytime. You'll also get access to additional pre-recorded content, practice exercises, and supplementary materials on our learning platform.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What projects will I work on during the bootcamp?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll build 12+ real-world projects including web applications, data analysis dashboards, automation tools, API integrations, and machine learning models. The capstone project simulates a real industry scenario where you'll solve actual business problems. All projects go into your portfolio to showcase to employers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is your refund policy?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 7-day money-back guarantee from the start date. If you're not satisfied with the bootcamp within the first week, you can request a full refund, no questions asked. After 7 days, refunds are handled on a case-by-case basis depending on circumstances.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Will I receive a certificate after completion?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Upon successful completion of the bootcamp, you'll receive an industry-recognized certificate. This certificate demonstrates your proficiency in Python development and can be shared on LinkedIn, your resume, and portfolio. We also provide project completion certificates for each major project.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What programming tools and software will I need?</h3>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll need a laptop or desktop computer (Windows, Mac, or Linux) with at least 4GB RAM. All software and tools we use are free and open-source, including Python, VS Code, Jupyter Notebooks, and Git. We provide detailed setup guides and technical support to help you get started.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3><span class="brand-code">Code</span><span class="brand-master">Master</span></h3>
+                <p>Empowering aspiring developers to build successful tech careers through comprehensive training and dedicated placement support.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#">Python Bootcamp</a></li>
+                    <li><a href="#">Data Science Track</a></li>
+                    <li><a href="#">AI Engineering</a></li>
+                    <li><a href="#">GenAI for Developers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Hire Our Graduates</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 CodeMaster. All rights reserved. Built with passion for aspiring developers.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
