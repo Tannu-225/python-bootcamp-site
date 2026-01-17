@@ -3,100 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Developer Bootcamp | GenAI Skills</title>
-    <link rel="stylesheet" href="styles2.css">
+    <title>Python Bootcamp | Ayin Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&family=Great+Vibes&family=Lora:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#7C3AED",
+                        secondary: "#10B981",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        signature: ["Great Vibes", "cursive"],
+                        serif: ["Lora", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-cert {
+            background: linear-gradient(180deg, #7C3AED 0%, #F97316 50%, #EF4444 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+        .community-rings {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.2;
+        }
+        .ring {
+            position: absolute;
+            border: 0.5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <div class="logo">
-            <img src="images/logo.png" alt="Ayin Education">
-        </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#career">Courses</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="Ayin Education" class="h-20 w-auto" style="height: 190px;">
+                </div>
+                <div id="nav-menu" class="hidden md:flex items-center space-x-10 font-medium text-gray-700" style="margin-left: 400px;" >
+                    <a class="hover:text-primary transition-colors text-base" href="./index.html">Home</a>
+                    <a class="hover:text-primary transition-colors text-base" href="#">About Us</a>
+                    <a class="hover:text-primary transition-colors text-base" href="#">Courses</a>
+                    <a class="hover:text-primary transition-colors text-base" href="#">Testimonials</a>
+                    <a class="hover:text-primary transition-colors text-base" href="#">Contact</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="menu-toggle" class="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </nav>
-    </header>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-4 font-medium text-gray-700">
+                    <a class="hover:text-primary transition-colors text-base py-2" href="./index.html">Home</a>
+                    <a class="hover:text-primary transition-colors text-base py-2" href="#">About Us</a>
+                    <a class="hover:text-primary transition-colors text-base py-2" href="#">Courses</a>
+                    <a class="hover:text-primary transition-colors text-base py-2" href="#">Testimonials</a>
+                    <a class="hover:text-primary transition-colors text-base py-2" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <section class="hero" id="#">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-left">
-                    <h1>Become a <span>Python Developer</span> With Industry-Ready Skills</h1>
-                    <p>Transform your career with our intensive Python Bootcamp. After you'll learn automation, data analysis, APIs, web development, and real-world projects. Accelerate your journey into tech with expert-led training and full support.</p>
-                    <button class="hero-cta">Download Syllabus →</button>
-                    
-                    <div class="trust-indicators">
-                        <div class="trust-item">
-                            <span class="stars">★★★★★</span>
-                            <span>Rated 4.9/5</span>
+    <!-- Hero Section -->
+    <section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-purple-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider text-primary uppercase bg-primary/10 rounded-full">
+                        Expert-Led Training
+                    </span>
+                    <h1 class="text-5xl lg:text-6xl font-display font-extrabold leading-tight mb-8">
+                        Become a <span class="text-primary">Python Developer</span> With Industry-Ready Skills
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-xl">
+                        Transform your career with our intensive Python Bootcamp. Learn automation, data analysis, APIs, web development, and real-world projects. Accelerate your journey into tech with expert-led training and full support.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <button class="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:shadow-lg hover:shadow-primary/30 transition-all">
+                            Download Syllabus <span class="material-icons-round">arrow_forward</span>
+                        </button>
+                    </div>
+                    <div class="flex flex-wrap gap-8 items-center border-t border-gray-200 pt-8">
+                        <div class="flex flex-col">
+                            <div class="flex items-center text-amber-400 mb-1">
+                                <span class="material-icons-round text-sm">star</span>
+                                <span class="material-icons-round text-sm">star</span>
+                                <span class="material-icons-round text-sm">star</span>
+                                <span class="material-icons-round text-sm">star</span>
+                                <span class="material-icons-round text-sm">star_half</span>
+                            </div>
+                            <span class="font-bold">Rated 4.9/5</span>
                         </div>
-                        <div class="trust-item">
-                            <span>👥</span>
-                            <span>5,000+ Learners</span>
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons-round text-primary p-2 bg-primary/10 rounded-lg">groups</span>
+                            <div>
+                                <p class="font-bold leading-none">5,000+</p>
+                                <p class="text-sm text-gray-500">Learners</p>
+                            </div>
                         </div>
-                        <div class="trust-item">
-                            <span>🎯</span>
-                            <span>98% Success Rate</span>
+                        <div class="flex items-center gap-3">
+                            <span class="material-icons-round text-secondary p-2 bg-secondary/10 rounded-lg">verified</span>
+                            <div>
+                                <p class="font-bold leading-none">98%</p>
+                                <p class="text-sm text-gray-500">Success Rate</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="hero-right">
-                    <div class="form-card">
-                        <h3>Reserve Your Free Webinar Seat</h3>
-                        <p class="subtitle">Join our next live info session and discover how this Python Bootcamp can accelerate your tech career.</p>
-                        
-                        <form>
-                            <div class="form-group">
-                                <label>Full Name*</label>
-                                <input type="text" placeholder="Enter your name" required>
+                <div class="relative">
+                    <div class="bg-white p-8 lg:p-10 rounded-3xl shadow-2xl border border-gray-100 relative z-10">
+                        <h3 class="text-2xl font-bold mb-2">Reserve Your Free Webinar Seat</h3>
+                        <p class="text-gray-500 mb-8">Join our next live info session and discover how this Python Bootcamp can accelerate your tech career.</p>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Full Name*</label>
+                                <input class="w-full bg-gray-50 border-gray-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="Enter your name" type="text"/>
                             </div>
-                            
-                            <div class="form-group">
-                                <label>Email Address*</label>
-                                <input type="email" placeholder="youremail@example.com" required>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Email Address*</label>
+                                <input class="w-full bg-gray-50 border-gray-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="youremail@example.com" type="email"/>
                             </div>
-                            
-                            <div class="form-group">
-                                <label>Mobile Number*</label>
-                                <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Mobile Number*</label>
+                                <input class="w-full bg-gray-50 border-gray-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary" placeholder="+91 XXXXX XXXXX" type="tel"/>
                             </div>
-                            
-                            <div class="form-group">
-                                <label>Education</label>
-                                <select>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2">Education</label>
+                                <select class="w-full bg-gray-50 border-gray-200 rounded-xl px-4 py-3 focus:ring-primary focus:border-primary">
                                     <option>Complete Beginner</option>
                                     <option>Intermediate</option>
-                                    <option>Switching Career</option>
-                                    <option>Student</option>
+                                    <option>Professional</option>
                                 </select>
                             </div>
-                            
-                            <div class="checkbox-group">
-                                <input type="checkbox" id="terms" required>
-                                <label for="terms">I agree to receive updates and communications</label>
+                            <div class="flex items-start gap-3">
+                                <input class="mt-1 rounded border-gray-300 text-primary focus:ring-primary" type="checkbox"/>
+                                <span class="text-sm text-gray-500">I agree to receive updates and communications regarding the bootcamp.</span>
                             </div>
-                            
-                            <button type="submit" class="form-submit">
-                                <span class="whatsapp-icon-button">
-                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                                        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.117 1.527 5.846L0 24l6.304-1.512A11.964 11.964 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.896 0-3.683-.531-5.195-1.448l-.372-.222-3.865.927.927-3.744-.244-.386A9.955 9.955 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
-                                    </svg>
-                                </span>
-                                Submit on WhatsApp
+                            <button class="w-full bg-secondary text-white py-4 rounded-xl font-bold flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-secondary/20 transition-all" type="submit">
+                                <span class="material-icons-round">forum</span> Submit on WhatsApp
                             </button>
                         </form>
                     </div>
@@ -104,429 +175,528 @@
             </div>
         </div>
     </section>
-<section class="roadmap-section" id="roadmap">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Learning Journey</div>
-                <h2>Your Path to Python Mastery</h2>
-                <p>A structured learning roadmap that takes you from beginner to industry-ready professional</p>
-            </div>
 
-            <div class="roadmap-image-wrapper">
-                <!-- <div class="roadmap-arrow-animated">↗</div> -->
-                <img src="images/roadmap.png" alt="Python Learning Roadmap - From Core Concepts to Industry Projects">
-            </div>
-        </div>
-    </section>
-    
-    <section class="program-highlights" id="career">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">10+ Career Options</div>
-                <h2>Career Options After Completing This Bootcamp</h2>
-                <p>Launch your career in one of the most in-demand tech roles</p>
-            </div>
-
-            <div class="highlights-grid">
-                <div class="highlight-card">
-                    <div class="card-image">
-                        <img src="images/python_developer.png" alt="Python Developer Team">
-                        <!-- <div class="card-badge">In-Demand</div> -->
-                    </div>
-                    <div class="card-content">
-                        <h3>Python Developer</h3>
-                        <p>Build applications, automate tasks, and create backend systems using Python frameworks like Django or FastAPI. Write clean, efficient code to power websites, software, and APIs.</p>
-                        <div class="card-footer">
-                            <a href="#" class="learn-more">
-                                Learn more
-                                <svg viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                </svg>
-                            </a>
-                            <div class="card-meta">⭐ 4.8/5</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="highlight-card">
-                    <div class="card-image">
-                        <img src="images/data_analyst.png" alt="Data Analytics Dashboard">
-                        <!-- <div class="card-badge">High Growth</div> -->
-                    </div>
-                    <div class="card-content">
-                        <h3>Data Analyst</h3>
-                        <p>Collect, clean, and interpret data to help businesses make informed decisions. Use Python, SQL, and visualization tools like Power BI to uncover patterns and present insights.</p>
-                        <div class="card-footer">
-                            <a href="#" class="learn-more">
-                                Learn more
-                                <svg viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                </svg>
-                            </a>
-                            <div class="card-meta">⭐ 4.9/5</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="highlight-card">
-                    <div class="card-image">
-                        <img src="images/data_scientist.png" alt="Data Science Team">
-                        <!-- <div class="card-badge">Future Ready</div> -->
-                    </div>
-                    <div class="card-content">
-                        <h3>Data Scientist</h3>
-                        <p>Use statistics, machine learning, and advanced algorithms to build predictive models. Analyze large datasets to solve complex problems and help companies forecast trends.</p>
-                        <div class="card-footer">
-                            <a href="#" class="learn-more">
-                                Learn more
-                                <svg viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                </svg>
-                            </a>
-                            <div class="card-meta">⭐ 4.7/5</div>
-                        </div>
-                    </div>
-                </div>
-
-                 <div class="highlight-card">
-                <div class="card-image">
-                    <img src="images/c_programming.png" alt="C Programming">
-                    <!-- <div class="card-badge">Foundation</div> -->
-                </div>
-                <div class="card-content">
-                    <h3>C Programming</h3>
-                    <p>Master the fundamentals of programming with C language. Learn memory management, data structures, and algorithms that form the foundation of computer science and systems programming.</p>
-                    <div class="card-footer">
-                        <a href="#" class="learn-more">
-                            Learn more
-                            <svg viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+    <!-- Why Python Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="bg-gradient-to-br from-purple-100 to-blue-50 p-12 rounded-3xl">
+                            <svg class="w-full max-w-lg mx-auto" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Laptop/Computer -->
+                                <rect x="80" y="80" width="240" height="140" rx="8" fill="#1F2937" stroke="#4F46E5" stroke-width="3"/>
+                                <rect x="90" y="90" width="220" height="115" rx="4" fill="#111827"/>
+                                
+                                <!-- Code lines -->
+                                <line x1="110" y1="110" x2="180" y2="110" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="110" y1="130" x2="220" y2="130" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="110" y1="150" x2="160" y2="150" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="110" y1="170" x2="240" y2="170" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="110" y1="190" x2="200" y2="190" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
+                                
+                                <!-- Python logo -->
+                                <circle cx="270" cy="130" r="20" fill="#3776AB"/>
+                                <circle cx="270" cy="150" r="20" fill="#FFD43B"/>
+                                <circle cx="268" cy="128" r="3" fill="white"/>
+                                <circle cx="268" cy="152" r="3" fill="#3776AB"/>
+                                
+                                <!-- Laptop base -->
+                                <path d="M 60 220 L 340 220 L 360 240 L 40 240 Z" fill="#374151"/>
+                                
+                                <!-- Floating elements -->
+                                <circle cx="50" cy="100" r="15" fill="#7C3AED" opacity="0.3"/>
+                                <circle cx="350" cy="180" r="20" fill="#10B981" opacity="0.3"/>
+                                <rect x="330" y="60" width="30" height="30" rx="5" fill="#F59E0B" opacity="0.3"/>
+                                
+                                <!-- Person -->
+                                <circle cx="200" cy="270" r="15" fill="#4F46E5"/>
+                                <path d="M 185 285 Q 200 280 215 285 L 215 295 L 185 295 Z" fill="#4F46E5"/>
                             </svg>
-                        </a>
-                        <div class="card-meta">
-                            ⭐ 4.7/5
                         </div>
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+                        <div class="absolute -top-4 -left-4 w-32 h-32 bg-secondary/10 rounded-full blur-2xl"></div>
                     </div>
                 </div>
-            </div>
-
-            <div class="highlight-card">
-                <div class="card-image">
-                    <img src="images/web_developer.png" alt="Web Developer">
-                    <!-- <div class="card-badge">Popular</div> -->
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-4xl font-display font-extrabold mb-8 relative">
+                        Why This Bootcamp?
+                        <span class="absolute bottom-0 left-0 w-20 h-1.5 bg-primary"></span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Python is the world's most versatile programming language, powering everything from web applications to AI systems. This bootcamp transforms complete beginners into confident Python developers through hands-on projects and expert mentorship. Whether you're starting your tech career or upskilling, this is your fastest path to becoming job-ready.
+                    </p>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-1">
+                                <span class="material-icons-round text-white text-xs">done</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-lg">Write Python programs independently</span>
+                                <p class="text-gray-500">Master the fundamentals and gain the confidence to build your own Python applications from scratch.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-1">
+                                <span class="material-icons-round text-white text-xs">done</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-lg">Understand core programming concepts</span>
+                                <p class="text-gray-500">Learn the essential building blocks that form the foundation of all modern programming languages.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-1">
+                                <span class="material-icons-round text-white text-xs">done</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-lg">Build simple real-world applications</span>
+                                <p class="text-gray-500">Apply your skills to create practical projects that solve real problems and showcase your abilities.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center mt-1">
+                                <span class="material-icons-round text-white text-xs">done</span>
+                            </div>
+                            <div>
+                                <span class="font-bold text-lg">Take the next step toward advanced Python</span>
+                                <p class="text-gray-500">Build a solid foundation that prepares you for advanced topics like data science, AI, and web development.</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="card-content">
-                    <h3>Web Developer</h3>
-                    <p>Create stunning websites and web applications using HTML, CSS, JavaScript, and modern frameworks. Build responsive, user-friendly interfaces that work across all devices and browsers.</p>
-                    <div class="card-footer">
-                        <a href="#" class="learn-more">
-                            Learn more
-                            <svg viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </div>
+        </div>
+    </section>
+
+     <!-- WhatsApp Community -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 flex items-center gap-3">
+                <div class="w-1.5 h-8 bg-primary rounded-full"></div>
+                <h2 class="text-3xl font-display font-extrabold">Join whatsapp community</h2>
+            </div>
+            <div class="bg-gray-900 rounded-3xl p-8 lg:p-24 relative overflow-hidden">
+                <div class="community-rings">
+                    <div class="ring" style="width: 100%; height: 100%;"></div>
+                    <div class="ring" style="width: 80%; height: 80%;"></div>
+                    <div class="ring" style="width: 60%; height: 60%;"></div>
+                    <div class="ring" style="width: 40%; height: 40%;"></div>
+                    <div class="ring" style="width: 20%; height: 20%;"></div>
+                </div>
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <p class="text-white/90 text-lg md:text-xl font-medium mb-12 max-w-2xl">
+                        Join a community of students dedicated to upskilling
+                    </p>
+                    <div class="relative mb-12">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 bg-white/10 rounded-full blur-3xl"></div>
+                        <h3 class="text-6xl md:text-8xl font-serif italic font-bold text-white tracking-tight relative z-10 text-glow">
+                            1,867,135
+                        </h3>
+                    </div>
+                    <p class="text-white/60 text-sm md:text-base font-medium max-w-xl">
+                        Approximately 10,000 students enroll in LetsUpgrade programs every day
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Will Learn -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-display font-extrabold mb-4">What You Will Learn</h2>
+                <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <span class="material-icons-round text-primary">check_circle</span>
+                        </div>
+                        <span class="font-semibold text-lg">Python Basics & Syntax</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <span class="material-icons-round text-primary">check_circle</span>
+                        </div>
+                        <span class="font-semibold text-lg">Variables, Data Types & Operators</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <span class="material-icons-round text-primary">check_circle</span>
+                        </div>
+                        <span class="font-semibold text-lg">Conditional Statements (if-else)</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <span class="material-icons-round text-primary">check_circle</span>
+                        </div>
+                        <span class="font-semibold text-lg">Loops (for, while)</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <span class="material-icons-round text-primary">check_circle</span>
+                        </div>
+                        <span class="font-semibold text-lg">Functions & Modules</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                            <span class="material-icons-round text-primary">check_circle</span>
+                        </div>
+                        <span class="font-semibold text-lg">Lists, Tuples, Dictionaries & Sets</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-primary/5 rounded-[2.5rem] blur-2xl group-hover:bg-primary/10 transition-all duration-500"></div>
+                    <div class="relative bg-gradient-to-br from-purple-50 to-blue-50 p-12 rounded-[2.5rem] border border-purple-100 shadow-xl overflow-hidden min-h-[400px] flex items-center justify-center">
+                        <!-- Decorative floating icons -->
+                        <div class="absolute top-8 left-8 p-4 bg-blue-100 rounded-2xl text-blue-600 animate-bounce">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
                             </svg>
-                        </a>
-                        <div class="card-meta">
-                            ⭐ 4.9/5
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="highlight-card">
-                <div class="card-image">
-                    <img src="images/full_stack_development.png" alt="Full Stack Developer">
-                    <!-- <div class="card-badge">Most Demanded</div> -->
-                </div>
-                <div class="card-content">
-                    <h3>Full Stack Developer</h3>
-                    <p>Become a complete developer by mastering both frontend and backend technologies. Build end-to-end applications using React, Node.js, databases, and cloud deployment platforms.</p>
-                    <div class="card-footer">
-                        <a href="#" class="learn-more">
-                            Learn more
-                            <svg viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        <div class="absolute bottom-12 right-12 p-4 bg-amber-100 rounded-2xl text-amber-600 animate-pulse">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
                             </svg>
+                        </div>
+                        <div class="absolute top-1/4 right-8 p-4 bg-green-100 rounded-2xl text-green-600">
+                            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Main laptop illustration -->
+                        <div class="flex flex-col items-center">
+                            <div class="relative w-80 h-56 bg-gray-800 rounded-2xl border-4 border-gray-700 shadow-2xl flex items-center justify-center overflow-hidden">
+                                <!-- Screen header bar -->
+                                <div class="absolute inset-x-0 top-0 h-8 bg-gray-700 flex items-center px-3 gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                                </div>
+                                
+                                <!-- Code editor content -->
+                                <div class="w-full h-full pt-8 px-4 pb-4 bg-gray-900">
+                                    <div class="space-y-3">
+                                        <!-- Code lines with Python syntax colors -->
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-purple-400 text-xs font-mono">def</span>
+                                            <span class="text-yellow-400 text-xs font-mono">learn_python</span>
+                                            <span class="text-gray-400 text-xs font-mono">():</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 ml-4">
+                                            <span class="text-green-400 text-xs font-mono">print</span>
+                                            <span class="text-orange-400 text-xs font-mono">("Hello World!")</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 ml-4">
+                                            <span class="text-purple-400 text-xs font-mono">return</span>
+                                            <span class="text-blue-400 text-xs font-mono">success</span>
+                                        </div>
+                                        
+                                        <!-- Python logo -->
+                                        <div class="flex justify-center mt-6">
+                                            <div class="relative w-16 h-16">
+                                                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M49.5 0C31.4 0 33.3 7.6 33.3 7.6L33.4 15.8H50V18.3H22.2C22.2 18.3 10 16.6 10 34.8C10 53 20.2 52.5 20.2 52.5H27.5V44.2C27.5 44.2 27.2 34 37.5 34H54.2C54.2 34 64 34.2 64 24.6V10.4C64 10.4 66 0 49.5 0Z" fill="#3776AB"/>
+                                                    <path d="M50.5 100C68.6 100 66.7 92.4 66.7 92.4L66.6 84.2H50V81.7H77.8C77.8 81.7 90 83.4 90 65.2C90 47 79.8 47.5 79.8 47.5H72.5V55.8C72.5 55.8 72.8 66 62.5 66H45.8C45.8 66 36 65.8 36 75.4V89.6C36 89.6 34 100 50.5 100Z" fill="#FFD43B"/>
+                                                    <circle cx="42" cy="10" r="3" fill="white"/>
+                                                    <circle cx="58" cy="90" r="3" fill="#3776AB"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Laptop base -->
+                            <div class="w-96 h-5 bg-gray-700 rounded-full mt-1"></div>
+                            <div class="w-64 h-20 bg-gray-600 rounded-b-3xl -mt-1 opacity-50"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details -->
+    <section class="py-24 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-display font-extrabold mb-4">Master Python in record time</h2>
+                <p class="text-gray-400">Everything you need to go from zero to hireable</p>
+            </div>
+            <div class="max-w-4xl mx-auto border border-gray-700 rounded-3xl p-8 lg:p-12 bg-gray-800/50">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 rounded-2xl border border-gray-600 flex items-center justify-center">
+                            <span class="material-icons-round text-3xl text-gray-400">calendar_month</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold">months</p>
+                            <p class="text-gray-400">Intensive Course</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 rounded-2xl border border-gray-600 flex items-center justify-center">
+                            <span class="material-icons-round text-3xl text-gray-400">video_call</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold">live session</p>
+                            <p class="text-gray-400">Interactive Learning</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 rounded-2xl border border-gray-600 flex items-center justify-center">
+                            <span class="material-icons-round text-3xl text-gray-400">timer</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold">1hr</p>
+                            <p class="text-gray-400">Flexible Scheduling</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 rounded-2xl border border-gray-600 flex items-center justify-center">
+                            <span class="material-icons-round text-3xl text-gray-400">psychology_alt</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold">doubt session</p>
+                            <p class="text-gray-400">1-on-1 Mentorship</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum CTA -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary/5 rounded-3xl p-8 lg:p-16 border border-primary/20">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div>
+                        <h2 class="text-3xl lg:text-4xl font-display font-extrabold mb-4">Full Curriculum</h2>
+                        <p class="text-gray-600 text-lg">Explore our comprehensive curriculum designed for 2024 standards.</p>
+                    </div>
+                    <button class="flex items-center gap-4 bg-white px-8 py-5 rounded-2xl border border-gray-200 hover:shadow-xl transition-all">
+                        <span class="text-xl font-bold">Download</span>
+                        <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white">
+                            <span class="material-icons-round">download</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootcamp Ticket -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-display font-extrabold mb-4">Bootcamp Ticket</h2>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-gray-900 rounded-3xl p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16">
+                    <!-- Left side - Text -->
+                    <div class="flex-1 text-left">
+                        <p class="text-primary text-xs font-bold mb-4 uppercase tracking-widest">BOOTCAMP PRICE</p>
+                        <h3 class="text-3xl lg:text-5xl font-display font-extrabold text-white leading-tight">
+                            Get your entry ticket to a <span class="text-primary">high-paying</span> tech career
+                        </h3>
+                    </div>
+                    
+                    <!-- Right side - Ticket Card -->
+                    <div class="flex-shrink-0">
+                        <div class="bg-gray-800 border-2 border-gray-700 rounded-2xl p-8 min-w-[280px]">
+                            <!-- Top section - Icon -->
+                            <div class="text-center mb-6 pb-6 border-b-2 border-dashed border-gray-700">
+                                <div class="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-xl mb-3">
+                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/>
+                                    </svg>
+                                </div>
+                                <p class="text-gray-400 text-xs font-bold uppercase tracking-wider">Admission Pass</p>
+                            </div>
+                            
+                            <!-- Bottom section - Price -->
+                            <div class="text-center">
+                                <p class="text-gray-400 text-sm font-semibold mb-2">One-time Investment</p>
+                                <p class="text-white text-5xl font-extrabold">RS 199</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-display font-extrabold mb-4 text-primary">Certify your Learning</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Complete the course with assignments, and request your course completion certificate
+                </p>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row overflow-hidden rounded-lg bg-white shadow-2xl">
+                    <div class="md:w-1/3 gradient-cert p-8 md:p-12 flex flex-col justify-between text-white">
+                        <div class="flex items-center gap-2 mb-8">
+                            <div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center">
+                                <span class="material-icons-round text-white">school</span>
+                            </div>
+                            <span class="text-2xl font-display font-bold">AyinEducations</span>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-xs font-bold tracking-widest opacity-80 uppercase mb-1">Date of Issue:</p>
+                                <p class="text-sm font-semibold">XXTH XXXX 20XX</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold tracking-widest opacity-80 uppercase mb-1">Certificate No:</p>
+                                <p class="text-sm font-semibold"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8 md:p-16 flex flex-col justify-center bg-white text-gray-900">
+                        <div class="space-y-6">
+                            <p class="text-xs font-bold tracking-widest text-gray-400 uppercase">This is to certify that</p>
+                            <h3 class="text-4xl md:text-6xl font-display font-extrabold text-gray-800">Your Name</h3>
+                            <div class="space-y-2">
+                                <p class="text-xs font-bold tracking-widest text-gray-400 uppercase">Has successfully completed</p>
+                                <h4 class="text-3xl md:text-4xl font-display font-extrabold text-primary">Python Bootcamp</h4>
+                            </div>
+                            <div class="py-4 border-y border-gray-100">
+                                <p class="text-sm font-medium text-gray-600">FROM <span class="text-gray-900 font-bold">XXTH XXXX 20XX</span> TO <span class="text-gray-900 font-bold">XXTH XXXX 20XX</span></p>
+                            </div>
+                            <p class="text-gray-500 leading-relaxed">
+                                Ayin Educations wishes you the best for your future endeavours.
+                            </p>
+                            <div class="pt-8 flex items-end justify-between">
+                                <div class="text-left">
+                                    <div class="w-32 h-px bg-gray-300 mb-2"></div>
+                                    <p class="text-xs font-bold tracking-widest text-gray-400 uppercase">Authorized Signatory</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Community -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 flex items-center gap-3">
+                <div class="w-1.5 h-8 bg-primary rounded-full"></div>
+                <h2 class="text-4xl font-display text-center font-extrabold">Join whatsapp community</h2>
+            </div>
+            <div class="bg-gray-900 rounded-3xl p-8 lg:p-24 relative overflow-hidden">
+                <div class="community-rings">
+                    <div class="ring" style="width: 100%; height: 100%;"></div>
+                    <div class="ring" style="width: 80%; height: 80%;"></div>
+                    <div class="ring" style="width: 60%; height: 60%;"></div>
+                    <div class="ring" style="width: 40%; height: 40%;"></div>
+                    <div class="ring" style="width: 20%; height: 20%;"></div>
+                </div>
+                <div class="relative z-10 text-center flex flex-col items-center">
+                    <p class="text-white/90 text-lg md:text-xl font-medium mb-12 max-w-2xl">
+                        Join a community of students dedicated to upskilling
+                    </p>
+                    <div class="relative mb-12">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 bg-white/10 rounded-full blur-3xl"></div>
+                        <h3 class="text-6xl md:text-8xl font-serif italic font-bold text-white tracking-tight relative z-10 text-glow">
+                            1,867,135
+                        </h3>
+                    </div>
+                    <p class="text-white/60 text-sm md:text-base font-medium max-w-xl">
+                        Approximately 10,000 students enroll in LetsUpgrade programs every day
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-2 mb-8">
+                        <span class="text-3xl font-display font-extrabold tracking-tight">Code<span class="text-red-500">Master</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-8 max-w-xs leading-relaxed">
+                        Empowering aspiring developers to build successful tech careers through comprehensive training and dedicated placement support.
+                    </p>
+                    <div class="flex gap-3">
+                        <a class="w-11 h-11 rounded-lg bg-gray-700 hover:bg-gray-600 flex items-center justify-center transition-colors" href="#">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         </a>
-                        <div class="card-meta">
-                            ⭐ 5.0/5
-                        </div>
+                        <a class="w-11 h-11 rounded-lg bg-gray-700 hover:bg-gray-600 flex items-center justify-center transition-colors" href="#">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                        </a>
+                        <a class="w-11 h-11 rounded-lg bg-gray-700 hover:bg-gray-600 flex items-center justify-center transition-colors" href="#">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a class="w-11 h-11 rounded-lg bg-gray-700 hover:bg-gray-600 flex items-center justify-center transition-colors" href="#">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
                     </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-8">Programs</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">Python Bootcamp</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Data Science Track</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">AI Engineering</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">GenAI for Developers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-8">Company</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Success Stories</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Hire Our Graduates</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-8">Support</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li><a class="hover:text-white transition-colors" href="#">Help Center</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                        <li><a class="hover:text-white transition-colors" href="#">Refund Policy</a></li>
+                    </ul>
                 </div>
             </div>
-
-                <!-- <div class="highlight-card">
-                    <div class="card-image">
-                        <img src="images/ai_engineer.png" alt="AI Engineering">
-                        <div class="card-badge">Cutting Edge</div>
-                    </div>
-                    <div class="card-content">
-                        <h3>AI Engineer</h3>
-                        <p>Design and build AI systems such as chatbots, recommendation engines, and computer vision apps. Work with deep learning, neural networks, and modern AI tools.</p>
-                        <div class="card-footer">
-                            <a href="#" class="learn-more">
-                                Learn more
-                                <svg viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                </svg>
-                            </a>
-                            <div class="card-meta">⭐ 5.0/5</div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </section>
-
-    
-
-    <section class="testimonials-section" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Student Success</div>  
-                <h2>What Our Students Say</h2>
-                <p>Real stories from developers who transformed their careers with us</p>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-center text-gray-500 text-sm">
+                <p>© 2024 CodeMaster. All rights reserved. Built with passion for aspiring developers.</p>
             </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">RS</div>
-                        <div class="testimonial-info">
-                            <h4>Rajesh Sharma</h4>
-                            <p>Python Developer at TCS</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">This bootcamp completely changed my career trajectory. I came from a non-tech background, and within 4 months of completing the program, I landed my dream job. The hands-on projects and mentor support were incredible!</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">PN</div>
-                        <div class="testimonial-info">
-                            <h4>Priya Nair</h4>
-                            <p>Data Analyst at Infosys</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">The curriculum is perfectly structured, taking you from basics to advanced concepts. The instructors are industry experts who explain complex topics in simple terms. Best investment I've made in my career!</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">AK</div>
-                        <div class="testimonial-info">
-                            <h4>Amit Kumar</h4>
-                            <p>AI Engineer at Wipro</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">The placement assistance is outstanding. From resume building to mock interviews, they prepare you for every step. I received 3 job offers within 2 weeks of completing the bootcamp. Highly recommended!</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">SK</div>
-                        <div class="testimonial-info">
-                            <h4>Sneha Kapoor</h4>
-                            <p>Full Stack Developer at Accenture</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">What sets this bootcamp apart is the real-world project experience. I built 10+ projects that impressed every interviewer. The learning platform is intuitive and the community support is amazing!</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">VD</div>
-                        <div class="testimonial-info">
-                            <h4>Vikram Desai</h4>
-                            <p>Backend Developer at Cognizant</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">I was skeptical about online learning, but this program exceeded all expectations. The live sessions, personalized feedback, and career guidance made all the difference. My salary doubled after completion!</p>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">AM</div>
-                        <div class="testimonial-info">
-                            <h4>Anjali Mehta</h4>
-                            <p>Data Scientist at Tech Mahindra</p>
-                        </div>
-                    </div>
-                    <div class="testimonial-rating">★★★★★</div>
-                    <p class="testimonial-text">The GenAI and machine learning modules are cutting-edge. The instructors keep the content updated with latest industry trends. This bootcamp gave me skills that are in high demand right now!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta">
-        <div class="container">
-            <h2>Start Your Career Journey Today</h2>
-            <p>Join thousands of successful developers. Transform your career in just 4 weeks.</p>
-            <div class="cta-buttons">
-                <button class="cta-primary">Book Free Webinar →</button>
-                <button class="cta-secondary">Download Syllabus</button>
-            </div>
-        </div>
-    </section>
-
-    <section class="faq-section" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Got Questions?</div>
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about the Python Bootcamp</p>
-            </div>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Do I need any prior programming experience to join?</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No prior programming experience is required! Our bootcamp is designed for complete beginners. We start with the fundamentals and gradually progress to advanced topics. Whether you're a student, working professional, or career switcher, you'll find the curriculum accessible and well-paced.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What is the duration of the bootcamp?</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>The bootcamp is an intensive 4-month program with flexible learning options. We offer both weekday and weekend batches to accommodate working professionals. You can expect to dedicate 10-15 hours per week, including live sessions, projects, and self-paced learning.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What kind of career support do you provide?</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We provide comprehensive career support including resume building, portfolio development, mock interviews, and direct connections to 1200+ hiring partners. Our placement team works with you one-on-one until you land your desired role. We also offer lifetime career guidance even after course completion.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Are the classes live or pre-recorded?</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>All classes are conducted live with experienced instructors, allowing real-time interaction and Q&A. Sessions are recorded and available for review anytime. You'll also get access to additional pre-recorded content, practice exercises, and supplementary materials on our learning platform.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What projects will I work on during the bootcamp?</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>You'll build 12+ real-world projects including web applications, data analysis dashboards, automation tools, API integrations, and machine learning models. The capstone project simulates a real industry scenario where you'll solve actual business problems. All projects go into your portfolio to showcase to employers.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What is your refund policy?</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We offer a 7-day money-back guarantee from the start date. If you're not satisfied with the bootcamp within the first week, you can request a full refund, no questions asked. After 7 days, refunds are handled on a case-by-case basis depending on circumstances.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Will I receive a certificate after completion?</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! Upon successful completion of the bootcamp, you'll receive an industry-recognized certificate. This certificate demonstrates your proficiency in Python development and can be shared on LinkedIn, your resume, and portfolio. We also provide project completion certificates for each major project.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>What programming tools and software will I need?</h3>
-                        <div class="faq-icon">+</div>
-                    </div>
-                    <div class="faq-answer">
-                        <p>You'll need a laptop or desktop computer (Windows, Mac, or Linux) with at least 4GB RAM. All software and tools we use are free and open-source, including Python, VS Code, Jupyter Notebooks, and Git. We provide detailed setup guides and technical support to help you get started.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3><span class="brand-code">Code</span><span class="brand-master">Master</span></h3>
-                <p>Empowering aspiring developers to build successful tech careers through comprehensive training and dedicated placement support.</p>
-                <div class="social-links">
-                    <a href="#" class="social-icon" aria-label="LinkedIn">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon" aria-label="YouTube">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="social-icon" aria-label="GitHub">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Programs</h4>
-                <ul>
-                    <li><a href="#">Python Bootcamp</a></li>
-                    <li><a href="#">Data Science Track</a></li>
-                    <li><a href="#">AI Engineering</a></li>
-                    <li><a href="#">GenAI for Developers</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Success Stories</a></li>
-                    <li><a href="#">Hire Our Graduates</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Refund Policy</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2024 CodeMaster. All rights reserved. Built with passion for aspiring developers.</p>
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icon between menu and close
+            const svg = menuToggle.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+            } else {
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+            }
+        });
+    </script>
 </body>
 </html>
