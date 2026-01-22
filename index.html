@@ -4,237 +4,456 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AVIN Education</title>
-    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#7C3AED",
+                        secondary: "#EC4899",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        signature: ["Great Vibes", "cursive"],
+                        serif: ["Lora", "serif"],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-cert {
+            background: linear-gradient(180deg, #7C3AED 0%, #F97316 50%, #EF4444 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+        .community-rings {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.2;
+        }
+        .ring {
+            position: absolute;
+            border: 0.5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes scaleIn1 {
+            from { opacity: 0; transform: translateX(-50%) scale(0.9); }
+            to { opacity: 1; transform: translateX(-50%) scale(1); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .animate-fadeInUp { animation: fadeInUp 1s forwards; }
+        .animate-slideInLeft-1 { animation: slideInLeft 0.7s 0.3s forwards; opacity: 0; }
+        .animate-slideInLeft-2 { animation: slideInLeft 0.7s 0.5s forwards; opacity: 0; }
+        .animate-slideInLeft-3 { animation: slideInLeft 0.7s 0.7s forwards; opacity: 0; }
+        .animate-scaleIn-1 { animation: scaleIn1 0.7s 0.2s forwards; opacity: 0; }
+        .animate-scaleIn-2 { animation: scaleIn 0.7s 0.4s forwards; opacity: 0; }
+        .animate-scaleIn-3 { animation: scaleIn 0.7s 0.6s forwards; opacity: 0; }
+        .animate-fadeInDown { animation: fadeInDown 0.7s 0.8s forwards; opacity: 0; }
+        .animate-bounce { animation: bounce 3s infinite; }
+        .nav-links.active { left: 0 !important; }
+        .mobile-menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-menu-toggle.open span:nth-child(2) { opacity: 0; }
+        .mobile-menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+    </style>
 </head>
-<body>
+<body class="font-sans text-gray-800 overflow-x-hidden">
     <!-- Header -->
-     <header>
-        <nav class="container">
-            <div class="logo">
-            <img src="images/logo.png" alt="Ayin Education">
+     <nav class="sticky top-0 z-50 bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="Ayin Education" class="h-40 w-auto">
+                </div>
+                <div id="nav-menu" class="hidden md:flex items-center space-x-10 font-medium text-gray-700" style="margin-left: 400px;" >
+                    <a class="hover:text-primary transition-colors text-base" href="#">Home</a>
+                    <a class="hover:text-primary transition-colors text-base" href="#">About Us</a>
+                    <a class="hover:text-primary transition-colors text-base" href="./course.html">Courses</a>
+                    <a class="hover:text-primary transition-colors text-base" href="#">Testimonials</a>
+                    <a class="hover:text-primary transition-colors text-base" href="#">Contact</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="menu-toggle" class="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-4 font-medium text-gray-700">
+                    <a class="hover:text-primary transition-colors text-base py-2" href="#">Home</a>
+                    <a class="hover:text-primary transition-colors text-base py-2" href="#">About Us</a>
+                    <a class="hover:text-primary transition-colors text-base py-2" href="./course.html">Courses</a>
+                    <a class="hover:text-primary transition-colors text-base py-2" href="#">Testimonials</a>
+                    <a class="hover:text-primary transition-colors text-base py-2" href="#">Contact</a>
+                </div>
+            </div>
         </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="./course.html">Courses</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <div class="mobile-menu-toggle" id="mobileMenuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    </nav>
+
+    
+       <!-- Hero Section -->
+    <section class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-purple-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Collage (shows first on mobile) -->
+                <div class="relative h-96 sm:h-[450px] lg:h-[550px] order-1 lg:order-1">
+                    <div class="absolute -top-2 left-1/4 w-12 h-12 bg-purple-200 rounded-full opacity-50 animate-bounce"></div>
+                    <div class="absolute bottom-0 right-1/4 w-10 h-10 bg-pink-200 rounded-lg opacity-50 animate-bounce" style="animation-delay: 0.5s;"></div>
+                    <div class="absolute bottom-1/4 left-4 w-8 h-8 bg-blue-200 rounded-full opacity-50 animate-bounce" style="animation-delay: 1s;"></div>
+                    
+                    <div class="absolute left-1/2 -translate-x-1/2 top-0 w-48 sm:w-56 lg:w-64 h-48 sm:h-56 lg:h-64 bg-white p-2 rounded-2xl shadow-2xl animate-scaleIn-1">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop" alt="Student learning" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    
+                    <div class="absolute right-0 sm:right-0 top-1/3 w-40 sm:w-48 lg:w-52 h-40 sm:h-48 lg:h-52 bg-white p-2 rounded-2xl shadow-2xl animate-scaleIn-2">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop" alt="Tutor assisting" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    
+                    <div class="absolute bottom-4 left-8 sm:left-12 w-36 sm:w-40 lg:w-44 h-36 sm:h-40 lg:h-44 bg-white p-2 rounded-2xl shadow-2xl animate-scaleIn-3">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" alt="Collaborative discussion" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    
+                    <div class="absolute top-12 sm:top-12 lg:top-12 right-2 sm:right-8 lg:right-12 bg-white p-3 lg:p-4 rounded-2xl shadow-2xl flex items-center gap-2 lg:gap-3 animate-fadeInDown">
+                        <div class="w-8 h-8 lg:w-12 lg:h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 lg:w-6 lg:h-6 stroke-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                            </svg>
+                        </div>
+                        <div class="hidden sm:block">
+                            <div class="font-bold text-sm lg:text-base">Course Completed</div>
+                            <div class="text-xs lg:text-sm text-gray-600">Congratulations!</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content (shows second on mobile) -->
+                <div class="order-2 lg:order-2">
+                    <h1 class="text-4xl sm:text-6xl lg:text-6xl font-bold mb-6 animate-slideInLeft-1">
+                        Master <span class="text-primary">Tech Skills</span><br> in Bite-Sized Lessons
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 mb-8 animate-slideInLeft-2">
+                        Transform your career with our industry-aligned micro-courses. Learn Python, Data Science, AI, and more at your own pace.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 animate-slideInLeft-3">
+                        <button class="px-8 py-4 bg-primary text-white rounded-lg font-semibold hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl">
+                            Get Started Free
+                        </button>
+                        <button class="px-8 py-4 bg-white text-primary border-2 border-primary rounded-lg font-semibold hover:bg-purple-50 transition-all duration-300">
+                            Explore Courses
+                        </button>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
+        </div>
+    </section>
 
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-grid">
-                    <!-- Left Column: Text Content -->
-                    <div class="hero-content">
-                        <h1 class="hero-title">
-                            Unlock Your <span class="highlight">Micro Learning</span> Power
-                        </h1>
-                        
-                        <p class="hero-subtitle">
-                            Master new skills in bite-sized lessons. Join thousands achieving their goals with our data-backed tech approach to expert insights.
-                        </p>
-                        
-                        <div class="hero-buttons">
-                            <button class="btn btn-primary">Get Started Now</button>
-                            <button class="btn btn-outline">Watch Demo</button>
+     <!-- Bootcamps Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 class="text-3xl lg:text-4xl font-display font-extrabold mb-2">Bootcamps :</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Python Bootcamp Card -->
+                <div class="group bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="p-6 relative">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                            <span class="text-xs font-bold text-blue-600">LIVE</span>
                         </div>
                         
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-display font-extrabold text-gray-900 mb-2">Master Python with AI</h3>
+                            <p class="text-sm text-gray-700 font-semibold">In Just 30 Days</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-24 h-24 bg-white rounded-2xl p-3 shadow-lg flex items-center justify-center">
+                                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M49.5 0C31.4 0 33.3 7.6 33.3 7.6L33.4 15.8H50V18.3H22.2C22.2 18.3 10 16.6 10 34.8C10 53 20.2 52.5 20.2 52.5H27.5V44.2C27.5 44.2 27.2 34 37.5 34H54.2C54.2 34 64 34.2 64 24.6V10.4C64 10.4 66 0 49.5 0Z" fill="#3776AB"/>
+                                        <path d="M50.5 100C68.6 100 66.7 92.4 66.7 92.4L66.6 84.2H50V81.7H77.8C77.8 81.7 90 83.4 90 65.2C90 47 79.8 47.5 79.8 47.5H72.5V55.8C72.5 55.8 72.8 66 62.5 66H45.8C45.8 66 36 65.8 36 75.4V89.6C36 89.6 34 100 50.5 100Z" fill="#FFD43B"/>
+                                        <circle cx="42" cy="10" r="3" fill="white"/>
+                                        <circle cx="58" cy="90" r="3" fill="#3776AB"/>
                                     </svg>
-                                </div>
-                                <div>
-                                    <div class="stat-value">50,000+</div>
-                                    <div class="stat-label">Students</div>
                                 </div>
                             </div>
-                            
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <div class="stat-value">200+</div>
-                                    <div class="stat-label">Courses</div>
-                                </div>
-                            </div>
-                            
-                            <div class="stat-item">
-                                <div class="stat-icon">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <div class="stat-value">98%</div>
-                                    <div class="stat-label">Success Rate</div>
+                            <div>
+                                <p class="text-xs text-gray-600 mb-1">Real Projects. Expert Mentors.</p>
+                                <div class="flex gap-1">
+                                    <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded-md font-semibold">Live Class</span>
                                 </div>
                             </div>
                         </div>
+                        
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl transition-colors">
+                            Start Your Journey
+                        </button>
                     </div>
+                </div>
 
-                    <!-- Right Column: Image Collage -->
-                    <div class="hero-images">
-                        <div class="floating-shape shape-1"></div>
-                        <div class="floating-shape shape-2"></div>
-                        <div class="floating-shape shape-3"></div>
-                        
-                        <div class="image-card image-1">
-                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop" alt="Student learning">
+                <!-- C Language Bootcamp Card -->
+                <div class="group bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="p-6 relative">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                            <span class="text-xs font-bold text-purple-600">LIVE</span>
                         </div>
                         
-                        <div class="image-card image-2">
-                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop" alt="Tutor assisting">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-display font-extrabold text-gray-900 mb-2">C Language Mastery</h3>
+                            <p class="text-sm text-gray-700 font-semibold">Foundation of Programming</p>
                         </div>
                         
-                        <div class="image-card image-3">
-                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop" alt="Collaborative discussion">
-                        </div>
-                        
-                        <div class="completion-badge">
-                            <div class="badge-icon">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
-                                </svg>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-24 h-24 bg-white rounded-2xl p-3 shadow-lg flex items-center justify-center">
+                                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="50" cy="50" r="45" fill="#00599C"/>
+                                        <text x="50" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="white" text-anchor="middle">C</text>
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="badge-text">
-                                <div class="badge-title">Course Completed</div>
-                                <div class="badge-subtitle">Congratulations!</div>
+                            <div>
+                                <p class="text-xs text-gray-600 mb-1">Build Strong Fundamentals</p>
+                                <div class="flex gap-1">
+                                    <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded-md font-semibold">Live Class</span>
+                                </div>
                             </div>
                         </div>
+                        
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-xl transition-colors">
+                            Start Your Journey
+                        </button>
                     </div>
-                    <!-- Feature Tags
-                    <div class="tags-container">
-                    <div class="tag">
-                        <span>✓ Trusted by 50,000+ Students</span>
+                </div>
+
+                <!-- Excel Bootcamp Card -->
+                <div class="group bg-gradient-to-br from-green-100 to-green-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="p-6 relative">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                            <span class="text-xs font-bold text-green-600">LIVE</span>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-display font-extrabold text-gray-900 mb-2">Excel Pro</h3>
+                            <p class="text-sm text-gray-700 font-semibold">Data Analysis & Automation</p>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-24 h-24 bg-white rounded-2xl p-3 shadow-lg flex items-center justify-center">
+                                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="100" height="100" rx="15" fill="#217346"/>
+                                        <text x="50" y="70" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="white" text-anchor="middle">X</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-600 mb-1">Advanced Formulas & Macros</p>
+                                <div class="flex gap-1">
+                                    <span class="bg-gray-800 text-white text-xs px-2 py-1 rounded-md font-semibold">Live Class</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-xl transition-colors">
+                            Start Your Journey
+                        </button>
                     </div>
-                    <div class="tag">
-                        <span>✓ 200+ Courses</span>
-                    </div>
-                    <div class="tag">
-                        <span>✓ 98% Success Rate</span>
-                    </div>
-                </div> -->
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
     <!-- Features -->
-    <section class="features">
-        <div class="features-header">
-            <p style="color: #7C3AED; font-weight: 600; margin-bottom: 0.5rem;">LEARN SMART, LEARN SMALL</p>
-            <h2>Why Choose MicroLearn?</h2>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">💡</div>
-                <h3>Smart Learning</h3>
-                <p>Learn using bite-sized content that fits into your busy schedule</p>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <p class="text-primary font-semibold mb-2">LEARN SMART, LEARN SMALL</p>
+                <h2 class="text-4xl font-bold">Why Choose Us?</h2>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">👨‍🏫</div>
-                <h3>Expert Content</h3>
-                <p>Content created and curated by industry experts</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎓</div>
-                <h3>Certifications</h3>
-                <p>Learn and monetize progress and skills within industry</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">♾️</div>
-                <h3>Flexible Access</h3>
-                <p>Access courses anywhere anytime on any device</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div class="text-5xl mb-4">
+                        <img src="images/smart_learning_icon.png" alt="Brain Icon" class="mx-auto h-24 w-auto"> 
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Smart Learning</h3>
+                    <p class="text-gray-600">Learn using bite-sized content that fits into your busy schedule</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div class="text-5xl mb-4">
+                        <img src="images/expert_content_icon.png" alt="Expert Icon" class="mx-auto h-24 w-auto">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Expert Content</h3>
+                    <p class="text-gray-600">Content created and curated by industry experts</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div class="text-5xl mb-4">
+                        <img src="images/certifications_icon.png" alt="Certification Icon" class="mx-auto h-24 w-auto">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Certifications</h3>
+                    <p class="text-gray-600">Learn and monetize progress and skills within industry</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl text-center hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                    <div class="text-5xl mb-4">
+                        <img src="images/flexible_access_icon.png" alt="Flexible Icon" class="mx-auto h-24 w-auto">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Flexible Access</h3>
+                    <p class="text-gray-600">Access courses anywhere anytime on any device</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Courses -->
-    <section class="courses" id="courses">
-        <div class="courses-header">
-            <div>
-                <p style="color: #7C3AED; font-weight: 600; margin-bottom: 0.5rem;">POPULAR COURSES</p>
-                <h2>Explore Popular Courses</h2>
-            </div>
-            <button class="btn btn-outline">View All Courses</button>
-        </div>
-        <div class="courses-grid">
-            <div class="course-card">
-                <div class="course-image">
-                    <span class="course-badge">In-Demand</span>
+    <section id="courses" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 gap-4">
+                <div>
+                    <p class="text-primary font-semibold mb-2">POPULAR COURSES</p>
+                    <h2 class="text-4xl font-bold">Explore Popular Courses</h2>
                 </div>
-                <div class="course-content">
-                    <h3 class="course-title">Python Developer</h3>
-                    <p class="course-description">Build applications, automate tasks, and create backend systems using Python. Frameworks like Django or FastAPI. Write clean, efficient code to power websites, software, and APIs.</p>
-                    <div class="course-footer">
-                        <a href="#" class="course-link">Learn more →</a>
-                        <div class="course-rating">
-                            <span class="star">⭐</span>
-                            <span>4.8/5</span>
+                <button class="px-6 py-3 bg-transparent text-primary border-2 border-primary rounded-lg font-semibold hover:bg-purple-50 transition-all duration-300">View All Courses</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Python Developer -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&h=400&fit=crop" alt="Python Developer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Python Developer</h3>
+                        <p class="text-gray-600 mb-4">Build applications, automate tasks, and create backend systems using Python....</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary font-semibold hover:gap-2 flex items-center gap-1 transition-all">Learn more →</a>
+                            <div class="flex items-center gap-1 text-gray-600">
+                                <span class="text-yellow-400">⭐</span>
+                                <span class="font-semibold">4.8/5</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="course-card">
-                <div class="course-image">
-                    <span class="course-badge">High Growth</span>
-                </div>
-                <div class="course-content">
-                    <h3 class="course-title">Data Analyst</h3>
-                    <p class="course-description">Collect, clean, and interpret data to help businesses make informed decisions. Use Python, SQL, and visualization tools like Power BI to uncover patterns and present insights.</p>
-                    <div class="course-footer">
-                        <a href="#" class="course-link">Learn more →</a>
-                        <div class="course-rating">
-                            <span class="star">⭐</span>
-                            <span>4.9/5</span>
+
+                <!-- Data Scientist -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Data Scientist" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Data Scientist</h3>
+                        <p class="text-gray-600 mb-4">Use statistics, machine learning, and advanced algorithms to build predictive models....</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary font-semibold hover:gap-2 flex items-center gap-1 transition-all">Learn more →</a>
+                            <div class="flex items-center gap-1 text-gray-600">
+                                <span class="text-yellow-400">⭐</span>
+                                <span class="font-semibold">4.9/5</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="course-card">
-                <div class="course-image">
-                    <span class="course-badge">Future Ready</span>
-                </div>
-                <div class="course-content">
-                    <h3 class="course-title">Data Scientist</h3>
-                    <p class="course-description">Use statistics, machine learning, and advanced algorithms to build predictive models. Analyze large datasets to solve complex problems and help companies forecast trends.</p>
-                    <div class="course-footer">
-                        <a href="#" class="course-link">Learn more →</a>
-                        <div class="course-rating">
-                            <span class="star">⭐</span>
-                            <span>4.7/5</span>
+
+                <!-- Data Analyst -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Data Analyst" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Data Analyst</h3>
+                        <p class="text-gray-600 mb-4">Collect, clean, and interpret data to help businesses make informed decisions....</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary font-semibold hover:gap-2 flex items-center gap-1 transition-all">Learn more →</a>
+                            <div class="flex items-center gap-1 text-gray-600">
+                                <span class="text-yellow-400">⭐</span>
+                                <span class="font-semibold">4.7/5</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="course-card">
-                <div class="course-image">
-                    <span class="course-badge">Cutting Edge</span>
+
+                <!-- C Programmer -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&h=400&fit=crop" alt="C Programmer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">C Programmer</h3>
+                        <p class="text-gray-600 mb-4">Master low-level programming, system software, and embedded systems development....</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary font-semibold hover:gap-2 flex items-center gap-1 transition-all">Learn more →</a>
+                            <div class="flex items-center gap-1 text-gray-600">
+                                <span class="text-yellow-400">⭐</span>
+                                <span class="font-semibold">4.6/5</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="course-content">
-                    <h3 class="course-title">AI Engineer</h3>
-                    <p class="course-description">Design and build AI systems such as chatbots, recommendation engines, and computer vision apps. Work with deep learning, neural networks, and modern AI tools.</p>
-                    <div class="course-footer">
-                        <a href="#" class="course-link">Learn more →</a>
-                        <div class="course-rating">
-                            <span class="star">⭐</span>
-                            <span>5.0/5</span>
+
+                <!-- Web Developer -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Web Developer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Web Developer</h3>
+                        <p class="text-gray-600 mb-4">Create stunning websites and web applications using HTML, CSS, and JavaScript....</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary font-semibold hover:gap-2 flex items-center gap-1 transition-all">Learn more →</a>
+                            <div class="flex items-center gap-1 text-gray-600">
+                                <span class="text-yellow-400">⭐</span>
+                                <span class="font-semibold">4.9/5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Stack Developer -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=400&fit=crop" alt="Full Stack Developer" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3">Full Stack Developer</h3>
+                        <p class="text-gray-600 mb-4">Master both frontend and backend development to build complete web applications....</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary font-semibold hover:gap-2 flex items-center gap-1 transition-all">Learn more →</a>
+                            <div class="flex items-center gap-1 text-gray-600">
+                                <span class="text-yellow-400">⭐</span>
+                                <span class="font-semibold">5.0/5</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -243,85 +462,99 @@
     </section>
 
     <!-- Transform -->
-    <section class="transform">
-        <div class="transform-content">
-            <h2>Transform Your Career with <span class="highlight">Micro Skills</span></h2>
-            <p>We've built a flexible and easy-to-use platform to develop practical skills that fuel career growth. All bundled up in micro lessons designed to fit your schedule.</p>
-            <ul class="transform-features">
-                <li>Industry-aligned curriculum</li>
-                <li>Hands-on, practical coursework</li>
-                <li>Flexible, self-paced modules</li>
-            </ul>
-            <button class="btn btn-primary">Start Your Journey</button>
-        </div>
-        <div class="transform-image">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop" alt="Career Growth">
+    <section class="py-20 bg-gradient-to-br from-indigo-900 to-purple-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">Transform Your Career with <span class="text-pink-400">Micro Skills</span></h2>
+                    <p class="text-lg mb-8 text-gray-200">We've built a flexible and easy-to-use platform to develop practical skills that fuel career growth. All bundled up in micro lessons designed to fit your schedule.</p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
+                            <span class="text-lg">Industry-aligned curriculum</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
+                            <span class="text-lg">Hands-on, practical coursework</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center font-bold flex-shrink-0">✓</span>
+                            <span class="text-lg">Flexible, self-paced modules</span>
+                        </li>
+                    </ul>
+                    <button class="px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:-translate-y-1 transition-all duration-300 shadow-xl">Start Your Journey</button>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop" alt="Career Growth" class="w-full rounded-2xl shadow-2xl">
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="faq" id="faqs">
-        <div class="faq-header">
-            <p style="color: #7C3AED; font-weight: 600; margin-bottom: 0.5rem;">SUPPORT</p>
-            <h2>Frequently Asked Questions</h2>
-        </div>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>What is Micro Learn?</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Micro Learn is an innovative online learning platform that breaks down complex topics into bite-sized, easily digestible lessons. Our approach helps you learn efficiently without overwhelming you with information.</p>
-                </div>
+    <section id="faqs" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <p class="text-primary font-semibold mb-2">SUPPORT</p>
+                <h2 class="text-4xl font-bold">Frequently Asked Questions</h2>
             </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Are the courses beginner-friendly?</span>
-                    <span class="faq-toggle">+</span>
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="faq-question px-6 py-5 cursor-pointer flex justify-between items-center font-semibold hover:bg-gray-50 transition-colors">
+                        <span>What is Micro Learn?</span>
+                        <span class="faq-toggle text-2xl text-primary transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-5 text-gray-600 leading-relaxed">Micro Learn is an innovative online learning platform that breaks down complex topics into bite-sized, easily digestible lessons. Our approach helps you learn efficiently without overwhelming you with information.</p>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Absolutely! Our courses are designed for all skill levels. We start with fundamentals and progressively build up to more advanced concepts, ensuring everyone can follow along at their own pace.</p>
+                <div class="faq-item bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="faq-question px-6 py-5 cursor-pointer flex justify-between items-center font-semibold hover:bg-gray-50 transition-colors">
+                        <span>Are the courses beginner-friendly?</span>
+                        <span class="faq-toggle text-2xl text-primary transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-5 text-gray-600 leading-relaxed">Absolutely! Our courses are designed for all skill levels. We start with fundamentals and progressively build up to more advanced concepts, ensuring everyone can follow along at their own pace.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Can I access courses on mobile?</span>
-                    <span class="faq-toggle">+</span>
+                <div class="faq-item bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="faq-question px-6 py-5 cursor-pointer flex justify-between items-center font-semibold hover:bg-gray-50 transition-colors">
+                        <span>Can I access courses on mobile?</span>
+                        <span class="faq-toggle text-2xl text-primary transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-5 text-gray-600 leading-relaxed">Yes! Our platform is fully responsive and we offer dedicated mobile apps for iOS and Android. Learn anytime, anywhere, on any device that's convenient for you.</p>
+                    </div>
                 </div>
-                <div class="faq-answer">
-                    <p>Yes! Our platform is fully responsive and we offer dedicated mobile apps for iOS and Android. Learn anytime, anywhere, on any device that's convenient for you.</p>
+                <div class="faq-item bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="faq-question px-6 py-5 cursor-pointer flex justify-between items-center font-semibold hover:bg-gray-50 transition-colors">
+                        <span>Do I get a certificate after completion?</span>
+                        <span class="faq-toggle text-2xl text-primary transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-5 text-gray-600 leading-relaxed">Yes! Upon completing a course, you'll receive a verified digital certificate that you can share on LinkedIn, add to your resume, or showcase in your professional portfolio.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Do I get a certificate after completion?</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes! Upon completing a course, you'll receive a verified digital certificate that you can share on LinkedIn, add to your resume, or showcase in your professional portfolio.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Can I cancel my subscription anytime?</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, you can cancel your subscription at any time with no penalties. If you cancel, you'll continue to have access until the end of your billing period.</p>
+                <div class="faq-item bg-white rounded-2xl overflow-hidden border border-gray-200">
+                    <div class="faq-question px-6 py-5 cursor-pointer flex justify-between items-center font-semibold hover:bg-gray-50 transition-colors">
+                        <span>Can I cancel my subscription anytime?</span>
+                        <span class="faq-toggle text-2xl text-primary transition-transform duration-300">+</span>
+                    </div>
+                    <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                        <p class="px-6 pb-5 text-gray-600 leading-relaxed">Yes, you can cancel your subscription at any time with no penalties. If you cancel, you'll continue to have access until the end of your billing period.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-   <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-20 pb-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                 <div>
-                    <div class="flex items-center" >
-                        <img src="images/logo.png" alt="Ayin Education" class="h-20 w-auto" style="height: 190px;">
+                    <div class="flex items-center mb-6">
+                        <img src="images/logo.png" alt="Ayin Education" class="h-40 w-auto">
                     </div>
                     <p class="text-gray-400 mb-8 max-w-xs leading-relaxed">
                         Empowering aspiring developers to build successful tech careers through comprehensive training and dedicated placement support.
@@ -375,6 +608,68 @@
         </div>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icon between menu and close
+            const svg = menuToggle.querySelector('svg');
+            if (mobileMenu.classList.contains('hidden')) {
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>';
+            } else {
+                svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>';
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const toggle = item.querySelector('.faq-toggle');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+                        otherItem.querySelector('.faq-toggle').style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                if (isActive) {
+                    item.classList.remove('active');
+                    answer.style.maxHeight = '0';
+                    toggle.style.transform = 'rotate(0deg)';
+                } else {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    toggle.style.transform = 'rotate(45deg)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
